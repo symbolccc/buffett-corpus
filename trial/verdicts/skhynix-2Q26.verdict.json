@@ -1,0 +1,233 @@
+{
+  "case": "SK hynix Inc.",
+  "period": "2Q26 (quarter ended 30.Jun.2026)",
+  "schema_version": "1.0",
+  "overall": "需人工核验",
+  "field_handling": {
+    "usable": 8,
+    "not_disclosed": [
+      "ocf",
+      "da",
+      "capex_total",
+      "interest_bearing_debt",
+      "receivables",
+      "total_assets",
+      "net_assets_attributable",
+      "customer_concentration_top1"
+    ],
+    "low_confidence": [],
+    "rule": "conf<0.9 or not_disclosed never counts as evidence"
+  },
+  "threshold_firing": [
+    {
+      "threshold": "T-nonrecurring-ratio",
+      "metric": "非经常性损益 / 净利润",
+      "bound": 0.3,
+      "direction": "<=",
+      "observed": 0.3554,
+      "decision_weight": "signal_only",
+      "action": "excess->earnings-quality review"
+    },
+    {
+      "threshold": "T-customer-concentration",
+      "metric": "第一大客户收入占比",
+      "bound": 0.5,
+      "direction": "<=",
+      "observed": -1,
+      "decision_weight": "signal_only",
+      "action": "not_disclosed -> uncertain (rule: no guessing)"
+    }
+  ],
+  "criteria": {
+    "gate_C-circle-competence": {
+      "status": "pass",
+      "evidence": "存储纯 play，可一段话解释",
+      "tags": [],
+      "auto_status": "not_scorable",
+      "annotated": true
+    },
+    "C-earnings-quality": {
+      "status": "uncertain",
+      "evidence": "OCF/NI=n/a nonrec_ratio=0.3554",
+      "tags": [
+        "ocf_or_ni_not_disclosed",
+        "uncertain_source(conf<0.9)"
+      ],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-owner-earnings": {
+      "status": "uncertain",
+      "evidence": "inputs not_disclosed/low-conf",
+      "tags": [
+        "missing_inputs"
+      ],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-debt-survival": {
+      "status": "pass",
+      "evidence": "analyst: 现金 88T 且称债务下降；具体数字 not_disclosed，自动判 uncertain 经分析师注明升级",
+      "tags": [
+        "missing_inputs"
+      ],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-receivables-risk": {
+      "status": "uncertain",
+      "evidence": "inputs not_disclosed",
+      "tags": [
+        "missing_inputs"
+      ],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-customer-risk": {
+      "status": "uncertain",
+      "evidence": "top1 concentration not_disclosed",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-inversion": {
+      "status": "uncertain",
+      "evidence": "needs analyst top-3 loss paths",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-time-horizon": {
+      "status": "uncertain",
+      "evidence": "needs 10y endgame statement",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-durability": {
+      "status": "uncertain",
+      "evidence": "needs disruption list + lifecycle evidence",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-moat-replicability": {
+      "status": "flag",
+      "evidence": "analyst: HBM4 良率+能效领先，同 Samsung 可复制性注记",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-moat-trend": {
+      "status": "uncertain",
+      "evidence": "needs >=5y margin/share trend (cyclical confusion guard)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-pricing-power": {
+      "status": "pass",
+      "evidence": "analyst: HBM/DRAM 提价+售罄，约10家核心客户多年长约",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-wonderful-at-fair": {
+      "status": "uncertain",
+      "evidence": "needs franchise/commodity classification",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-institutional-imperative": {
+      "status": "uncertain",
+      "evidence": "needs M&A history + capital allocation review",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-mgmt-integrity": {
+      "status": "uncertain",
+      "evidence": "needs audited disclosure review (quarterly=review only)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-risk-three-class": {
+      "status": "uncertain",
+      "evidence": "needs three explicit risks",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-margin-of-safety": {
+      "status": "uncertain",
+      "evidence": "no valuation input -> uncertain (rule: no buy/sell without price)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-price-vs-value": {
+      "status": "uncertain",
+      "evidence": "no intrinsic value range -> uncertain",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-1-overvalued": {
+      "status": "uncertain",
+      "evidence": "no price vs value range",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-2-moat-destroyed": {
+      "status": "uncertain",
+      "evidence": "depends on C-moat-trend",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-3-integrity": {
+      "status": "uncertain",
+      "evidence": "no fraud evidence file",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-4-better-opportunity": {
+      "status": "uncertain",
+      "evidence": "no candidate list",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    }
+  },
+  "review_needed_criteria": [
+    "C-earnings-quality",
+    "C-owner-earnings",
+    "C-receivables-risk",
+    "C-customer-risk",
+    "C-inversion",
+    "C-time-horizon",
+    "C-durability",
+    "C-moat-replicability",
+    "C-moat-trend",
+    "C-wonderful-at-fair",
+    "C-institutional-imperative",
+    "C-mgmt-integrity",
+    "C-risk-three-class",
+    "C-margin-of-safety",
+    "C-price-vs-value",
+    "C-sell-1-overvalued",
+    "C-sell-2-moat-destroyed",
+    "C-sell-3-integrity",
+    "C-sell-4-better-opportunity"
+  ],
+  "notes_applied": [
+    "C-debt-survival",
+    "C-moat-replicability",
+    "C-pricing-power",
+    "gate_C-circle-competence"
+  ]
+}

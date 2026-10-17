@@ -1,0 +1,263 @@
+{
+  "case": "Samsung Electronics Co., Ltd.",
+  "period": "2Q26 (quarter ended 30.Jun.2026)",
+  "schema_version": "1.0",
+  "overall": "需人工核验",
+  "field_handling": {
+    "usable": 17,
+    "not_disclosed": [
+      "net_income_deducted",
+      "capex_maintenance",
+      "interest_expense",
+      "prepayments",
+      "goodwill",
+      "roic",
+      "customer_concentration_top1",
+      "litigation_disclosure",
+      "share_pledge_or_freeze"
+    ],
+    "low_confidence": [
+      {
+        "field": "working_capital_delta",
+        "confidence": 0.85
+      }
+    ],
+    "rule": "conf<0.9 or not_disclosed never counts as evidence"
+  },
+  "threshold_firing": [
+    {
+      "threshold": "T-cash-conversion",
+      "metric": "现金转换率 OCF/净利",
+      "bound": 0.9,
+      "direction": ">=",
+      "observed": 1.4676,
+      "decision_weight": "signal_only",
+      "action": "cash conversion check"
+    },
+    {
+      "threshold": "T-nonrecurring-ratio",
+      "metric": "非经常性损益 / 净利润",
+      "bound": 0.3,
+      "direction": "<=",
+      "observed": 0.0684,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-leverage-ebitda",
+      "metric": "有息负债 / EBITDA",
+      "bound": 2.0,
+      "direction": "<=",
+      "observed": 0.2206,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-receivables-net-assets",
+      "metric": "(应收+预付) / 归母净资产",
+      "bound": 3.0,
+      "direction": "<=",
+      "observed": 0.1664,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-customer-concentration",
+      "metric": "第一大客户收入占比",
+      "bound": 0.5,
+      "direction": "<=",
+      "observed": -1,
+      "decision_weight": "signal_only",
+      "action": "not_disclosed -> uncertain (rule: no guessing)"
+    }
+  ],
+  "criteria": {
+    "gate_C-circle-competence": {
+      "status": "pass",
+      "evidence": "DS 占收入 74%，生意可一段话解释",
+      "tags": [],
+      "auto_status": "not_scorable",
+      "annotated": true
+    },
+    "C-earnings-quality": {
+      "status": "pass",
+      "evidence": "OCF/NI=1.468 nonrec_ratio=0.0684",
+      "tags": [
+        "uncertain_source(conf<0.9)"
+      ],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-owner-earnings": {
+      "status": "pass",
+      "evidence": "NI+D&A-capex(-WC)=43.8",
+      "tags": [
+        "conservative_total_capex(capex_maintenance not_disclosed)",
+        "low_conf_working_capital(conf=0.85)"
+      ],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-debt-survival": {
+      "status": "pass",
+      "evidence": "debt/ebitda=0.221 net_cash=167.59",
+      "tags": [
+        "interest_coverage_skipped(not_disclosed)"
+      ],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-receivables-risk": {
+      "status": "pass",
+      "evidence": "(AR+pre)/NA=0.166",
+      "tags": [
+        "prepayments_not_disclosed"
+      ],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-customer-risk": {
+      "status": "uncertain",
+      "evidence": "top1 concentration not_disclosed",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-inversion": {
+      "status": "uncertain",
+      "evidence": "needs analyst top-3 loss paths",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-time-horizon": {
+      "status": "uncertain",
+      "evidence": "needs 10y endgame statement",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-durability": {
+      "status": "uncertain",
+      "evidence": "needs disruption list + lifecycle evidence",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-moat-replicability": {
+      "status": "flag",
+      "evidence": "analyst: HBM4 领先真实，但对手以同等量级 capex 跟进：能复制、代价极高",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-moat-trend": {
+      "status": "uncertain",
+      "evidence": "needs >=5y margin/share trend (cyclical confusion guard)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-pricing-power": {
+      "status": "pass",
+      "evidence": "analyst: 售罄+提价，DRAM/NAND bit sales 历史新高",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-wonderful-at-fair": {
+      "status": "uncertain",
+      "evidence": "needs franchise/commodity classification",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-institutional-imperative": {
+      "status": "flag",
+      "evidence": "analyst: 全行业 capex 竞赛=教科书级机构惯性；DX 亏损仍保留",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-mgmt-integrity": {
+      "status": "uncertain",
+      "evidence": "needs audited disclosure review (quarterly=review only)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-risk-three-class": {
+      "status": "uncertain",
+      "evidence": "needs three explicit risks",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-margin-of-safety": {
+      "status": "uncertain",
+      "evidence": "no valuation input -> uncertain (rule: no buy/sell without price)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-price-vs-value": {
+      "status": "uncertain",
+      "evidence": "no intrinsic value range -> uncertain",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-1-overvalued": {
+      "status": "uncertain",
+      "evidence": "no price vs value range",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-2-moat-destroyed": {
+      "status": "uncertain",
+      "evidence": "depends on C-moat-trend",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-3-integrity": {
+      "status": "uncertain",
+      "evidence": "no fraud evidence file",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-4-better-opportunity": {
+      "status": "uncertain",
+      "evidence": "no candidate list",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    }
+  },
+  "review_needed_criteria": [
+    "C-customer-risk",
+    "C-inversion",
+    "C-time-horizon",
+    "C-durability",
+    "C-moat-replicability",
+    "C-moat-trend",
+    "C-wonderful-at-fair",
+    "C-institutional-imperative",
+    "C-mgmt-integrity",
+    "C-risk-three-class",
+    "C-margin-of-safety",
+    "C-price-vs-value",
+    "C-sell-1-overvalued",
+    "C-sell-2-moat-destroyed",
+    "C-sell-3-integrity",
+    "C-sell-4-better-opportunity"
+  ],
+  "notes_applied": [
+    "C-institutional-imperative",
+    "C-moat-replicability",
+    "C-pricing-power",
+    "gate_C-circle-competence"
+  ]
+}

@@ -1,0 +1,7 @@
+[
+ {"criterion":"C-circle-competence","status":"pass","justification":"存储纯 play，可一段话解释"},
+ {"criterion":"C-pricing-power","status":"pass","justification":"HBM/DRAM 提价+售罄，约10家核心客户多年长约"},
+ {"criterion":"C-moat-replicability","status":"flag","justification":"HBM4 良率+能效领先，同 Samsung 可复制性注记"},
+ {"criterion":"C-moat-trend","status":"uncertain","justification":"周期混淆"},
+ {"criterion":"C-debt-survival","status":"pass","justification":"现金 88T 且称债务下降；具体数字 not_disclosed，自动判 uncertain 经分析师注明升级"}
+]

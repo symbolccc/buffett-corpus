@@ -1,0 +1,8 @@
+[
+ {"criterion":"C-circle-competence","status":"pass","justification":"DS 占收入 74%，生意可一段话解释"},
+ {"criterion":"C-moat-trend","status":"uncertain","justification":"margin 6.3%到52.2%属价格周期，非护城河变宽（周期混淆守卫）"},
+ {"criterion":"C-moat-replicability","status":"flag","justification":"HBM4 领先真实，但对手以同等量级 capex 跟进：能复制、代价极高"},
+ {"criterion":"C-pricing-power","status":"pass","justification":"售罄+提价，DRAM/NAND bit sales 历史新高"},
+ {"criterion":"C-institutional-imperative","status":"flag","justification":"全行业 capex 竞赛=教科书级机构惯性；DX 亏损仍保留"},
+ {"criterion":"C-mgmt-integrity","status":"uncertain","justification":"季报为 review 非审计、诉讼披露 not_disclosed：veto 未触发但证据不足"}
+]
