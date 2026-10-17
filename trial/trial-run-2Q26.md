@@ -1,66 +1,62 @@
-# Trial Run · 2Q26 · Samsung Electronics vs SK hynix
+# 试跑报告 · 2Q26 · Samsung Electronics vs SK hynix
 
-> 2026-10-17 · 目的：验证「26 字段抽取 → 20 判据 → 结论」通路是否真的会拒绝凑结论。
-> 输入：samsung.com IR 2Q26 conference PDF（p12–15）；SK hynix 2Q26 newsroom release + SEC 6-K 存在性确认（CIK 0002120882）。
-> 字段明细见 samsung-2Q26.financials.json / skhynix-2Q26.financials.json（每字段带 confidence + source_locator）。
+> 2026-10-17 · 目的：验证「26 字段抽取 → confidence/locator 门槛 → 20 判据 → 结论」整条通路是否真的会拒绝凑结论。
+> 数据源：Samsung = samsung.com IR `2026_2Q_conference_eng.pdf`（p12–15，实测抽取 16 页 0 空页）；SK hynix = newsroom 2Q26 release + SEC 6-K 存在性确认（CIK 0002120882，tickers SKHY/HXSCL）。
+> 字段级明细：samsung-2Q26.financials.json（27 键）/ skhynix-2Q26.financials.json（16 键，含缺口声明）。
 
-## 0. 通则执行记录（规则是否真的 firing）
+## 0. 规则 firing 记录（这是试跑的真正目的）
 
-| 规则 | 触发情况 |
-| :-- | :-- |
-| confidence < 0.9 → uncertain | Samsung 3 个字段触发：non_recurring_detail(0.8)、working_capital_delta(0.85 推导)、roic(0.7)。**推导值也被降级**，不只抽取值 |
-| 年报不披露 → not_disclosed，禁止猜 | Samsung 6 项、SK hynix 12 项。维持性 capex 两家都 not_disclosed |
-| 非经常性损益占比 >30% → 盈利质量复核 | **SK hynix 触发**：净利 93.92 > 营业利润 60.54 ⇒ 非经营收益 +33.38 = 净利的 36% ⇒ C-earnings-quality 判 uncertain，不得 pass |
-| gate 不通过则停止打分 | 两家 gate 均通过，未触发 |
-| 无估值输入 → 不得给买卖结论 | 两家 C-margin-of-safety / C-price-vs-value 均 uncertain ⇒ **总体结论只能是「需人工核验/观察」** |
-
-## 1. Samsung Electronics 2Q26（KRW 万亿）
-
-收入 171.5（+130% YoY）· 营业利润 89.5（margin 52.2%）· 净利 71.6 · OCF 105.08 · D&A 12.11 · capex 14.11 · 有息负债 22.41 · 现金* 190.0 · 净资产 579.3 · 净现金 167.6
-
-| 判据 | 结果 | 依据/注 |
+| 规则 | 是否触发 | 证据 |
 | :-- | :-- | :-- |
-| C-circle-competence (gate) | pass | DS 半导体占收入 74%（127.5/171.5），生意可一段话解释 |
-| C-moat-replicability | **flag** | 按 Q3 原问「竞争者认真投入能否复制」：HBM4 领先真实，但 SK hynix/美光以同等量级 capex 在做 ⇒ 答「能，代价极高」⇒ 不构成否决但记 flag |
-| C-moat-trend | **uncertain** | margin 6.3%→52.2% 是**价格周期**不是护城河变宽。周期混淆必须标出，否则会把周期当 moat |
+| confidence < 0.9 → 进 uncertain 不进判据 | ✅ 触发 3 次（Samsung） | non_recurring_detail 0.8、working_capital_delta 0.85（**推导值也被降级**）、roic 0.7 |
+| 年报不披露 → not_disclosed，禁止猜 | ✅ 触发 18 次 | Samsung 6 项、SK hynix 12 项；维持性 capex 两家均 not_disclosed |
+| 非经常性损益/净利 > 30% → 盈利质量复核 | ✅ 触发（SK hynix） | 净利 93.92 > 营业利润 60.54 ⇒ 非经营收益 +33.38 = 净利 36% ⇒ C-earnings-quality = uncertain，**不得 pass** |
+| gate（能力圈）不通过 → 停止打分 | 未触发 | 两家 gate 均通过 |
+| 无估值输入 → 不得输出买卖结论 | ✅ 触发（两家） | C-margin-of-safety / C-price-vs-value 均 uncertain ⇒ 总体只能「需人工核验/观察」 |
+| 周期混淆必须标出 | ✅ 触发（两家） | 毛利率/OP margin 的暴涨是**价格周期**，不是护城河变宽；C-moat-trend 判 uncertain 而非 pass |
+
+## 1. Samsung Electronics 2Q26（KRW 万亿，合并口径）
+
+收入 171.5（YoY +130%）· OP 89.5（margin 52.2%）· 净利 71.6 · OCF 105.08 · D&A 12.11 · capex 14.11 · 有息负债 22.41 · 现金* 190.0 · 权益 579.3 · 净现金 167.6 · DS 分部收入 127.5 / OP 89.2（margin 70%）· DX 分部 OP **-0.8（亏损）**
+
+| 判据 | 结果 | 注 |
+| :-- | :-- | :-- |
+| C-circle-competence (gate) | pass | DS 占收入 74%，生意可一段话解释 |
+| C-moat-replicability | flag | HBM4 领先真实，但 SK hynix/美光以同等量级 capex 在做 ⇒「能复制，代价极高」 |
+| C-moat-trend | uncertain | margin 6.3%→52.2% 是周期，不是 moat |
 | C-pricing-power | pass | 售罄+提价，DRAM/NAND bit sales 历史新高 |
-| C-institutional-imperative | **signal** | 全行业 capex 竞赛 = 教科书级机构惯性；DX 分部亏损（-0.8）仍保留 |
+| C-institutional-imperative | signal | 全行业 capex 竞赛=教科书级机构惯性；DX 亏损仍保留 |
 | C-mgmt-integrity (veto) | 未触发 | 季报为 review 非审计，无掩盖证据 |
 | C-earnings-quality | pass | OCF/净利 = 147% |
-| C-owner-earnings | pass | 71.6+12.1−14.1−25.8(WC,uncertain) ≈ +44，即使按全 capex 计仍强正 |
-| C-debt-survival | pass | 净现金 167.6；debt/equity 4%；收入−30% 压力测试轻松存活 |
-| T-cash-conversion 147% / T-leverage 0.22 / T-receivables 0.17 | pass | 均 signal_only，不计否决 |
+| C-owner-earnings | pass | 71.6+12.1−14.1−25.8(WC, uncertain) ≈ +44，强正 |
+| C-debt-survival | pass | 净现金 167.6；debt/equity 4% |
 | C-margin-of-safety / C-price-vs-value | uncertain | 无估值输入 |
-| 卖出标准 1–4 | not_applicable | 买方分析 |
+| 阈值 T-cash-conversion / T-leverage-ebitda / T-nonrecurring-ratio / T-receivables | pass / pass / pass(带 uncertain 标签) / pass | 147% · 0.22× · 6.6% · 0.17× |
 
-**总体：需人工核验（观察）。** 不是「买」。理由：估值缺失 + margin 扩张为周期混淆 + moat 可复制性 flag + capex 竞赛 signal。
+**总体：需人工核验（观察）。** 不是买入结论——估值缺失 + 周期混淆 + moat 可复制 flag，三者任一都不允许给「建议通过」级结论。
 
 ## 2. SK hynix 2Q26（KRW 万亿）
 
-收入 79.3187（+257% YoY）· 营业利润 60.5426（margin 76%）· 净利 93.9226（margin 118%）· 现金 88.0 · H1 收入 131.895
+收入 79.3187（YoY +257%）· OP 60.5426（margin 76%）· 净利 93.9226（margin 118%）· 现金 88.0 · H1 收入 131.895 / H1 OP 98.1529
 
-| 判据 | 结果 | 依据/注 |
+| 判据 | 结果 | 注 |
 | :-- | :-- | :-- |
-| C-circle-competence (gate) | pass | 存储纯-play，可解释 |
-| C-earnings-quality | **uncertain（复核触发）** | 净利>营业利润 ⇒ 非经营 +33.38 = 净利 36% > 30% 阈值；构成未披露 ⇒ 不得 pass |
-| C-pricing-power | pass | HBM/DRAM 提价+售罄，约 10 家核心客户多年长协 |
-| C-moat-replicability | flag | HBM4 良率+能效领先真实；同可复制性 caveat |
-| C-moat-trend | uncertain | 同上周期混淆 |
-| C-debt-survival | pass-with-note | 现金 88T、债务下降（方向披露、数字 not_disclosed） |
-| 12/26 字段 not_disclosed | → 相关判据 uncertain | 新闻稿无 BS/CF 明细；6-K exhibit 路径已记录未取 |
-| C-margin-of-safety / C-price-vs-value | uncertain | 无估值输入 |
+| C-circle-competence (gate) | pass | 存储纯play，可解释 |
+| C-earnings-quality | **uncertain（复核触发）** | 净利>OP ⇒ 非经营 +33.38 = 36% > 30% 阈值；构成未披露 |
+| C-pricing-power | pass | HBM/DRAM 提价+售罄，约 10 家核心客户多年长约 |
+| C-moat-replicability | flag | HBM4 良率+能效领先，同 Samsung 的可复制性注记 |
+| C-moat-trend | uncertain | 周期混淆 |
+| C-debt-survival | pass(带注) | 现金 88T、债务下降；**具体债务数字 not_disclosed** |
+| 其余 12 个 schema 键 | not_disclosed | 新闻稿不含 BS/CF；完整数据在 6-K exhibit（路径已记录：CIK 0002120882，2026-07-29 6-K accession 0001193125-26-321989；该 shell 无 exhibit 链接，未继续追） |
 
-**总体：需人工核验。** 比三星更强一档的「核验」，因为盈利质量复核触发 + 数据缺口更大。
+**总体：需人工核验。** 比 Samsung 更强的「核验」信号：盈利质量复核触发 + 数据缺口 12 项。
 
-## 3. 这次试跑证明了什么
+## 3. 试跑证明了三件事 / 暴露了一件事
 
-1. **系统会拒绝有说服力**：两家都是史上最强季度，打分卡若机械运行会给出漂亮高分；本通路因估值缺失+周期混淆+非经常触发，输出「需人工核验」。这是设计目标达成，不是失败。
-2. **周期混淆被显式标出**（C-moat-trend uncertain）——这是把「margin 变宽」误当「moat 变宽」的常见错误，schema 层挡住了它。
-3. **not_disclosed 与 derived<0.9 都正确传播到 uncertain**，没有一个字段被猜。
-4. **缺口即证据**：SK hynix 的 12 个 not_disclosed 直接告诉你下一步该取 6-K exhibit，而不是让模型补数。
+证明：
+1. **规则会真的 firing**——net>OP 异常、推导值降级、not_disclosed 传播，全部按设计执行，没有一条被「常识」绕过。
+2. **系统会拒绝有说服力**——两家都是史上最强季度，输出却是「需人工核验」。这正是巴菲特方法的要求：强业绩≠可买。
+3. **provenance 机制在实战中可用**——所有 pass 都能指到 p12–15 或 release 原文；所有 uncertain 都能指到「缺什么」。
 
-## 4. 未做（诚实清单）
-
-- 估值层（内在价值区间）未输入 ⇒ 买卖结论不可能产生。P6 之前这是常态。
-- SK hynix 完整 BS/CF 未取（6-K 壳无 exhibit 链接；路径 CIK 0002120882 / 2026-07-29 6-K 已记录）。
-- 两家均为季报 review 非审计 ⇒ audit_opinion 字段值为 review，C-mgmt-integrity 的证据强度受限。
+暴露：
+- **韩股不在层0 自动通路内**（既非 EDGAR 也非 A股）。SK hynix 因 ADR 上市而有 6-K，属意外收获；纯韩股/日股/欧股需要逐个市场补 resolver。已在 README「主战场」节注明美股为主，其余市场按用例补。
