@@ -1,0 +1,26 @@
+{
+  "company": "SK hynix Inc.",
+  "market": "KRX + NASDAQ ADR (CIK 0002120882, tickers SKHY/HXSCL)",
+  "period": "2Q26 (quarter ended 30.Jun.2026)",
+  "source": "news.skhynix.com/en/q2-2026-business-results/ (2026-07-29) + SEC 6-K series confirmed present; full BS exhibit not fetched this run",
+  "unit": "KRW trillion",
+  "fields": [
+    { "key": "revenue", "value": 79.3187, "confidence": 0.99, "source_locator": "release headline" },
+    { "key": "net_income", "value": 93.9226, "confidence": 0.99, "source_locator": "release headline", "note": "net > operating profit => large non-operating gain; triggers T-nonrecurring-ratio review" },
+    { "key": "operating_profit", "value": 60.5426, "confidence": 0.99, "source_locator": "release headline (OP margin 76%)" },
+    { "key": "non_recurring_detail", "value": ["non-operating gain implied = net 93.92 - OP 60.54 = +33.38 (composition not disclosed)"], "confidence": 0.7, "source_locator": "derived from two disclosed aggregates", "note": "36% of net => >30% threshold => earnings-quality review, do not pass" },
+    { "key": "cash_and_equivalents", "value": 88.0, "confidence": 0.95, "source_locator": "release: cash and cash equivalents 88 trillion won at quarter end" },
+    { "key": "ocf", "value": "not_disclosed", "confidence": 1.0, "source_locator": "not in press release; 6-K exhibit path recorded: CIK 0002120882 6-K around 2026-07-29" },
+    { "key": "da", "value": "not_disclosed", "confidence": 1.0, "source_locator": "same" },
+    { "key": "capex_total", "value": "not_disclosed", "confidence": 1.0, "source_locator": "release states CapEx Discipline principle, no number" },
+    { "key": "interest_bearing_debt", "value": "not_disclosed", "confidence": 1.0, "source_locator": "release states debt fell, no number" },
+    { "key": "receivables", "value": "not_disclosed", "confidence": 1.0, "source_locator": "not in release" },
+    { "key": "total_assets", "value": "not_disclosed", "confidence": 1.0, "source_locator": "not in release" },
+    { "key": "net_assets_attributable", "value": "not_disclosed", "confidence": 1.0, "source_locator": "not in release" },
+    { "key": "customer_concentration_top1", "value": "not_disclosed", "confidence": 1.0, "source_locator": "release: long-term agreements with around 10 key customers (no percentages)" },
+    { "key": "audit_opinion", "value": "review (quarterly)", "confidence": 0.9, "source_locator": "K-IFRS convention" },
+    { "key": "h1_revenue", "value": 131.895, "confidence": 0.99, "source_locator": "release (context field, outside 26-key schema)" },
+    { "key": "h1_operating_profit", "value": 98.1529, "confidence": 0.99, "source_locator": "release (context field)" }
+  ],
+  "gap_note": "12 of 26 schema keys not_disclosed from press release alone. Per rule they enter uncertain, not criteria. Full set available via SEC 6-K exhibit (CIK 0002120882) - fetch path recorded, not executed this run."
+}

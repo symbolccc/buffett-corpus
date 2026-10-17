@@ -1,0 +1,1413 @@
+﻿{
+    "cik":  "0001067983",
+    "name":  "BERKSHIRE HATHAWAY INC",
+    "tickers":  [
+                    "BRK-B",
+                    "BRK-A"
+                ],
+    "fetched_at":  "2026-10-17T23:47:10Z",
+    "window_note":  "EDGAR submissions recent window only; oldest in this pull: 2023-02-27",
+    "count":  200,
+    "filings":  [
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-10-05",
+                        "reportDate":  "2026-10-01",
+                        "accession":  "0001193125-26-414744",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-09-30",
+                        "reportDate":  "2026-09-28",
+                        "accession":  "0001193125-26-409451",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-09-29",
+                        "reportDate":  "2026-09-28",
+                        "accession":  "0001728451-26-000004",
+                        "primaryDoc":  "xslF345X06/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-09-25",
+                        "reportDate":  "2026-09-23",
+                        "accession":  "0001193125-26-403089",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-09-21",
+                        "reportDate":  "2026-09-17",
+                        "accession":  "0001193125-26-397059",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-09-04",
+                        "reportDate":  "2026-09-03",
+                        "accession":  "0001728451-26-000003",
+                        "primaryDoc":  "xslF345X06/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2026-08-14",
+                        "reportDate":  "2026-06-30",
+                        "accession":  "0001193125-26-352200",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-08-13",
+                        "reportDate":  "2026-08-12",
+                        "accession":  "0001193125-26-349574",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-08-13",
+                        "reportDate":  "2026-08-12",
+                        "accession":  "0001193125-26-349555",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-08-04",
+                        "reportDate":  "2026-07-31",
+                        "accession":  "0001193125-26-333151",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-07-15",
+                        "reportDate":  "2026-07-14",
+                        "accession":  "0001193125-26-304843",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-07-02",
+                        "reportDate":  "2026-07-01",
+                        "accession":  "0001728451-26-000002",
+                        "primaryDoc":  "xslF345X06/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-05-26",
+                        "reportDate":  "2026-05-22",
+                        "accession":  "0001193125-26-239886",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-05-20",
+                        "reportDate":  "2026-05-18",
+                        "accession":  "0001193125-26-232543",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-05-18",
+                        "reportDate":  "2026-05-14",
+                        "accession":  "0001193125-26-229218",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2026-05-15",
+                        "reportDate":  "2026-03-31",
+                        "accession":  "0001193125-26-226661",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-05-06",
+                        "reportDate":  "2026-05-06",
+                        "accession":  "0001193125-26-209661",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-05-05",
+                        "reportDate":  "2026-05-01",
+                        "accession":  "0001193125-26-207021",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-03-27",
+                        "reportDate":  "2026-03-27",
+                        "accession":  "0001728451-26-000001",
+                        "primaryDoc":  "xslF345X06/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-03-19",
+                        "reportDate":  "2026-03-17",
+                        "accession":  "0001193125-26-116315",
+                        "primaryDoc":  "xslF345X06/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-03-05",
+                        "reportDate":  "2026-03-04",
+                        "accession":  "0001193125-26-092556",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "10-K",
+                        "filingDate":  "2026-03-02",
+                        "reportDate":  "2025-12-31",
+                        "accession":  "0001193125-26-083899",
+                        "primaryDoc":  "brka-20251231.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-02-17",
+                        "reportDate":  "2026-01-06",
+                        "accession":  "0001193125-26-054947",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2026-02-17",
+                        "reportDate":  "2025-12-31",
+                        "accession":  "0001193125-26-054580",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2026-02-02",
+                        "reportDate":  "2026-01-29",
+                        "accession":  "0001193125-26-033900",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2025-11-14",
+                        "reportDate":  "2025-09-30",
+                        "accession":  "0001193125-25-282901",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-11-12",
+                        "reportDate":  "2025-11-10",
+                        "accession":  "0001193125-25-277658",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-11-05",
+                        "reportDate":  "2025-11-03",
+                        "accession":  "0001193125-25-267252",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-10-29",
+                        "reportDate":  "2025-10-27",
+                        "accession":  "0001193125-25-256858",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-10-24",
+                        "reportDate":  "2025-10-22",
+                        "accession":  "0001728451-25-000009",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-09-26",
+                        "reportDate":  "2025-09-26",
+                        "accession":  "0001728451-25-000008",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-09-26",
+                        "reportDate":  "2025-09-24",
+                        "accession":  "0001728451-25-000007",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR/A",
+                        "filingDate":  "2025-08-14",
+                        "reportDate":  "2025-03-31",
+                        "accession":  "0000950123-25-008361",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2025-08-14",
+                        "reportDate":  "2025-06-30",
+                        "accession":  "0000950123-25-008343",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-08-08",
+                        "reportDate":  "2025-08-08",
+                        "accession":  "0001728451-25-000006",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-08-04",
+                        "reportDate":  "2025-07-31",
+                        "accession":  "0000950170-25-102306",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-08-04",
+                        "reportDate":  "2025-07-31",
+                        "accession":  "0000950170-25-102303",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-08-01",
+                        "reportDate":  "2025-07-30",
+                        "accession":  "0000950170-25-101546",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-07-16",
+                        "reportDate":  "2025-07-14",
+                        "accession":  "0000950170-25-096373",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-06-30",
+                        "reportDate":  "2025-06-27",
+                        "accession":  "0000950170-25-091838",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-05-27",
+                        "reportDate":  "2025-05-22",
+                        "accession":  "0000950170-25-078056",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-05-15",
+                        "reportDate":  "2025-05-13",
+                        "accession":  "0000950170-25-072923",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2025-05-15",
+                        "reportDate":  "2025-03-31",
+                        "accession":  "0000950123-25-005701",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-05-12",
+                        "reportDate":  "2025-05-08",
+                        "accession":  "0000950170-25-069150",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-04-09",
+                        "reportDate":  "2025-04-07",
+                        "accession":  "0000950170-25-052621",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-04-04",
+                        "reportDate":  "2025-04-02",
+                        "accession":  "0001728451-25-000003",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-03-21",
+                        "reportDate":  "2025-03-19",
+                        "accession":  "0000950170-25-043423",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-03-14",
+                        "reportDate":  "2025-03-14",
+                        "accession":  "0001728451-25-000002",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-03-04",
+                        "reportDate":  "2025-03-03",
+                        "accession":  "0000919574-25-001778",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "10-K",
+                        "filingDate":  "2025-02-24",
+                        "reportDate":  "2024-12-31",
+                        "accession":  "0000950170-25-025210",
+                        "primaryDoc":  "brka-20241231.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-02-19",
+                        "reportDate":  "2025-02-14",
+                        "accession":  "0000950170-25-023556",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2025-02-14",
+                        "reportDate":  "2024-12-31",
+                        "accession":  "0000950123-25-002701",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-02-13",
+                        "reportDate":  "2025-02-11",
+                        "accession":  "0000950170-25-020189",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-02-11",
+                        "reportDate":  "2025-02-07",
+                        "accession":  "0000950170-25-018266",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-02-03",
+                        "reportDate":  "2025-01-30",
+                        "accession":  "0000950170-25-012600",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-01-17",
+                        "reportDate":  "2025-01-16",
+                        "accession":  "0001728451-25-000001",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-01-03",
+                        "reportDate":  "2024-12-31",
+                        "accession":  "0000950170-25-001533",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2025-01-03",
+                        "reportDate":  "2024-12-31",
+                        "accession":  "0000950170-25-001530",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-30",
+                        "reportDate":  "2024-12-26",
+                        "accession":  "0000950170-24-141263",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-27",
+                        "reportDate":  "2024-12-24",
+                        "accession":  "0000950170-24-140795",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-26",
+                        "reportDate":  "2024-12-20",
+                        "accession":  "0000950170-24-140587",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-19",
+                        "reportDate":  "2024-12-17",
+                        "accession":  "0000950170-24-138717",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-19",
+                        "reportDate":  "2024-12-17",
+                        "accession":  "0000950170-24-138712",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-19",
+                        "reportDate":  "2024-12-17",
+                        "accession":  "0000950170-24-138710",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-11",
+                        "reportDate":  "2024-12-09",
+                        "accession":  "0000950170-24-135465",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-12-04",
+                        "reportDate":  "2024-12-03",
+                        "accession":  "0000950170-24-133370",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2024-11-25",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-265100",
+                        "primaryDoc":  "d34884dsc13da.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-11-25",
+                        "reportDate":  "2024-11-25",
+                        "accession":  "0000950170-24-130514",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-11-22",
+                        "reportDate":  "2024-11-20",
+                        "accession":  "0001728451-24-000006",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "SC 13G",
+                        "filingDate":  "2024-11-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-258561",
+                        "primaryDoc":  "d49764dsc13g.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-11-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-258557",
+                        "primaryDoc":  "d836532dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-11-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-258555",
+                        "primaryDoc":  "d837380dsc13ga.htm"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2024-11-14",
+                        "reportDate":  "2024-09-30",
+                        "accession":  "0000950123-24-011775",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-11-07",
+                        "reportDate":  "2024-11-05",
+                        "accession":  "0000950170-24-123605",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-31",
+                        "reportDate":  "2024-10-29",
+                        "accession":  "0000950170-24-119748",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-18",
+                        "reportDate":  "2024-10-16",
+                        "accession":  "0000950170-24-115720",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-17",
+                        "reportDate":  "2024-10-15",
+                        "accession":  "0000950170-24-115415",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-11",
+                        "reportDate":  "2024-10-09",
+                        "accession":  "0000950170-24-114414",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-10",
+                        "reportDate":  "2024-10-08",
+                        "accession":  "0000950170-24-114125",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-07",
+                        "reportDate":  "2024-10-03",
+                        "accession":  "0000950170-24-113350",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-10-02",
+                        "reportDate":  "2024-09-30",
+                        "accession":  "0000950170-24-111799",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-27",
+                        "reportDate":  "2024-09-25",
+                        "accession":  "0000950170-24-110123",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-09-26",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-226917",
+                        "primaryDoc":  "d158704dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-09-26",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-226916",
+                        "primaryDoc":  "d888586dsc13ga.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-24",
+                        "reportDate":  "2024-09-20",
+                        "accession":  "0000950170-24-109158",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-19",
+                        "reportDate":  "2024-09-17",
+                        "accession":  "0000950170-24-108228",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-13",
+                        "reportDate":  "2024-09-12",
+                        "accession":  "0001728451-24-000005",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-13",
+                        "reportDate":  "2024-09-12",
+                        "accession":  "0000950170-24-106521",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-12",
+                        "reportDate":  "2024-09-09",
+                        "accession":  "0000950170-24-106169",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-12",
+                        "reportDate":  "2024-09-09",
+                        "accession":  "0000950170-24-106166",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-11",
+                        "reportDate":  "2024-09-09",
+                        "accession":  "0001728451-24-000004",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-10",
+                        "reportDate":  "2024-09-06",
+                        "accession":  "0000950170-24-105263",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-09-05",
+                        "reportDate":  "2024-09-03",
+                        "accession":  "0000950170-24-104183",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-08-30",
+                        "reportDate":  "2024-08-28",
+                        "accession":  "0000950170-24-102487",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-08-27",
+                        "reportDate":  "2024-08-23",
+                        "accession":  "0000950170-24-101212",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-08-19",
+                        "reportDate":  "2024-08-15",
+                        "accession":  "0000950170-24-098772",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2024-08-14",
+                        "reportDate":  "2024-06-30",
+                        "accession":  "0000950123-24-008740",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2024-08-08",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-197170",
+                        "primaryDoc":  "d792254dsc13da.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-08-01",
+                        "reportDate":  "2024-07-30",
+                        "accession":  "0000950170-24-089567",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-07-29",
+                        "reportDate":  "2024-07-25",
+                        "accession":  "0000950170-24-087477",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-07-24",
+                        "reportDate":  "2024-07-22",
+                        "accession":  "0000950170-24-086209",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-07-19",
+                        "reportDate":  "2024-07-17",
+                        "accession":  "0000950170-24-085022",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-07-02",
+                        "reportDate":  "2024-07-02",
+                        "accession":  "0000950170-24-080567",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2024-06-28",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-172349",
+                        "primaryDoc":  "d792739dsc13da.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-06-28",
+                        "reportDate":  "2024-06-28",
+                        "accession":  "0000950170-24-079108",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-06-17",
+                        "reportDate":  "2024-06-13",
+                        "accession":  "0000950170-24-074516",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-06-17",
+                        "reportDate":  "2024-06-13",
+                        "accession":  "0000950170-24-074512",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-06-12",
+                        "reportDate":  "2024-06-10",
+                        "accession":  "0000950170-24-072629",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-06-07",
+                        "reportDate":  "2024-06-05",
+                        "accession":  "0000950170-24-071037",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-05-17",
+                        "reportDate":  "2024-05-15",
+                        "accession":  "0001728451-24-000002",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR/A",
+                        "filingDate":  "2024-05-15",
+                        "reportDate":  "2023-12-31",
+                        "accession":  "0000950123-24-005664",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR/A",
+                        "filingDate":  "2024-05-15",
+                        "reportDate":  "2023-09-30",
+                        "accession":  "0000950123-24-005653",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2024-05-15",
+                        "reportDate":  "2024-03-31",
+                        "accession":  "0000950123-24-005622",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-05-01",
+                        "reportDate":  "2024-04-29",
+                        "accession":  "0000950170-24-051479",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-04-26",
+                        "reportDate":  "2024-04-24",
+                        "accession":  "0000950170-24-049364",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-04-26",
+                        "reportDate":  "2024-04-24",
+                        "accession":  "0000950170-24-049363",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-04-12",
+                        "reportDate":  "2024-04-10",
+                        "accession":  "0000950170-24-044198",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-04-12",
+                        "reportDate":  "2024-04-10",
+                        "accession":  "0000950170-24-044194",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-04-08",
+                        "reportDate":  "2024-04-04",
+                        "accession":  "0000950170-24-042747",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-04-08",
+                        "reportDate":  "2024-04-04",
+                        "accession":  "0000950170-24-042741",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-04-08",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-089047",
+                        "primaryDoc":  "d820989dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-04-08",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-089033",
+                        "primaryDoc":  "d822830dsc13ga.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-28",
+                        "reportDate":  "2024-03-26",
+                        "accession":  "0000950170-24-038366",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-28",
+                        "reportDate":  "2024-03-26",
+                        "accession":  "0000950170-24-038364",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-25",
+                        "reportDate":  "2024-03-21",
+                        "accession":  "0000950170-24-036129",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-25",
+                        "reportDate":  "2024-03-21",
+                        "accession":  "0000950170-24-036127",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-12",
+                        "reportDate":  "2024-03-08",
+                        "accession":  "0000950170-24-030397",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-12",
+                        "reportDate":  "2024-03-08",
+                        "accession":  "0000950170-24-030389",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-06",
+                        "reportDate":  "2024-03-04",
+                        "accession":  "0000950170-24-027491",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-03-06",
+                        "reportDate":  "2024-03-04",
+                        "accession":  "0000950170-24-027488",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "10-K",
+                        "filingDate":  "2024-02-26",
+                        "reportDate":  "2023-12-31",
+                        "accession":  "0000950170-24-019719",
+                        "primaryDoc":  "brka-20231231.htm"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2024-02-16",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-038549",
+                        "primaryDoc":  "d754035dsc13da.htm"
+                    },
+                    {
+                        "form":  "SC 13G",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036540",
+                        "primaryDoc":  "d107507dsc13g.htm"
+                    },
+                    {
+                        "form":  "SC 13G",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036510",
+                        "primaryDoc":  "d107111dsc13g.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036487",
+                        "primaryDoc":  "d756261dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036472",
+                        "primaryDoc":  "d724468dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036431",
+                        "primaryDoc":  "d751537dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036425",
+                        "primaryDoc":  "d719287dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036409",
+                        "primaryDoc":  "d544735dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036390",
+                        "primaryDoc":  "d787968dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036389",
+                        "primaryDoc":  "d748369dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-036383",
+                        "primaryDoc":  "d757641dsc13ga.htm"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2024-02-14",
+                        "reportDate":  "2023-12-31",
+                        "accession":  "0000950123-24-002518",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-13",
+                        "reportDate":  "",
+                        "accession":  "0001104659-24-020017",
+                        "primaryDoc":  "tv0025-berkshirehathawayincc.htm"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-09",
+                        "reportDate":  "",
+                        "accession":  "0000315066-24-001023",
+                        "primaryDoc":  "filing.txt"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-02-05",
+                        "reportDate":  "2024-02-01",
+                        "accession":  "0000950170-24-011524",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-02-05",
+                        "reportDate":  "",
+                        "accession":  "0001086364-24-006332",
+                        "primaryDoc":  "us0846707026_020524.txt"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-02-01",
+                        "reportDate":  "2024-01-30",
+                        "accession":  "0000950170-24-009976",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-02-01",
+                        "reportDate":  "2024-01-30",
+                        "accession":  "0000950170-24-009975",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-01-29",
+                        "reportDate":  "",
+                        "accession":  "0000093751-24-000358",
+                        "primaryDoc":  "Berkshire_Hathaway.txt"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-25",
+                        "reportDate":  "2024-01-23",
+                        "accession":  "0000950170-24-007657",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-25",
+                        "reportDate":  "2024-01-23",
+                        "accession":  "0000950170-24-007656",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-17",
+                        "reportDate":  "2024-01-12",
+                        "accession":  "0000950170-24-005158",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-17",
+                        "reportDate":  "2024-01-12",
+                        "accession":  "0000950170-24-005152",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-12",
+                        "reportDate":  "2024-01-12",
+                        "accession":  "0001728451-24-000001",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2024-01-10",
+                        "reportDate":  "",
+                        "accession":  "0001193125-24-005968",
+                        "primaryDoc":  "d635115dsc13ga.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-04",
+                        "reportDate":  "2024-01-02",
+                        "accession":  "0000950170-24-002273",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2024-01-04",
+                        "reportDate":  "2024-01-02",
+                        "accession":  "0000950170-24-002271",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-12-21",
+                        "reportDate":  "2023-12-19",
+                        "accession":  "0000950170-23-072358",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-12-18",
+                        "reportDate":  "2023-12-14",
+                        "accession":  "0000899243-23-020659",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-12-14",
+                        "reportDate":  "2023-10-27",
+                        "accession":  "0000899243-23-020637",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-12-13",
+                        "reportDate":  "2023-12-11",
+                        "accession":  "0000950170-23-070147",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13G/A",
+                        "filingDate":  "2023-12-11",
+                        "reportDate":  "",
+                        "accession":  "0001193125-23-292614",
+                        "primaryDoc":  "d619180dsc13ga.htm"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2023-11-27",
+                        "reportDate":  "",
+                        "accession":  "0001193125-23-283406",
+                        "primaryDoc":  "d609834dsc13da.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-11-21",
+                        "reportDate":  "2023-11-21",
+                        "accession":  "0000899243-23-020451",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2023-11-21",
+                        "reportDate":  "",
+                        "accession":  "0001193125-23-281502",
+                        "primaryDoc":  "d617943dsc13da.htm"
+                    },
+                    {
+                        "form":  "13F-HR/A",
+                        "filingDate":  "2023-11-16",
+                        "reportDate":  "2023-09-30",
+                        "accession":  "0000950123-23-011029",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2023-11-14",
+                        "reportDate":  "2023-09-30",
+                        "accession":  "0000950123-23-010898",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-11-13",
+                        "reportDate":  "2023-11-08",
+                        "accession":  "0001728451-23-000010",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-10-30",
+                        "reportDate":  "2023-05-17",
+                        "accession":  "0001209191-23-053898",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-10-25",
+                        "reportDate":  "2023-10-23",
+                        "accession":  "0001728451-23-000009",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-10-25",
+                        "reportDate":  "2023-10-23",
+                        "accession":  "0000950170-23-055334",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-10-05",
+                        "reportDate":  "2023-10-03",
+                        "accession":  "0000950170-23-052238",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-10-05",
+                        "reportDate":  "2023-10-05",
+                        "accession":  "0001209191-23-052187",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-10-02",
+                        "reportDate":  "2023-09-28",
+                        "accession":  "0000950170-23-051239",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-09-27",
+                        "reportDate":  "2023-09-25",
+                        "accession":  "0000950170-23-050203",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-09-22",
+                        "reportDate":  "2023-09-20",
+                        "accession":  "0000950170-23-049487",
+                        "primaryDoc":  "xslF345X05/ownership.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-09-13",
+                        "reportDate":  "2023-09-11",
+                        "accession":  "0000899243-23-018843",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-09-08",
+                        "reportDate":  "2023-09-08",
+                        "accession":  "0001728451-23-000008",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-08-17",
+                        "reportDate":  "2023-08-15",
+                        "accession":  "0001728451-23-000007",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-08-16",
+                        "reportDate":  "2023-08-15",
+                        "accession":  "0000899243-23-018188",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-08-15",
+                        "reportDate":  "2023-03-09",
+                        "accession":  "0001209191-23-045935",
+                        "primaryDoc":  "xslF345X05/doc4.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2023-08-14",
+                        "reportDate":  "2023-06-30",
+                        "accession":  "0000950123-23-008074",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-08-10",
+                        "reportDate":  "2023-08-08",
+                        "accession":  "0001728451-23-000006",
+                        "primaryDoc":  "xslF345X05/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-06-30",
+                        "reportDate":  "2023-06-28",
+                        "accession":  "0001728451-23-000005",
+                        "primaryDoc":  "xslF345X04/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-06-28",
+                        "reportDate":  "2023-06-26",
+                        "accession":  "0000950170-23-030512",
+                        "primaryDoc":  "xslF345X04/ownership.xml"
+                    },
+                    {
+                        "form":  "SC 13D/A",
+                        "filingDate":  "2023-06-22",
+                        "reportDate":  "",
+                        "accession":  "0001193125-23-172282",
+                        "primaryDoc":  "d414086dsc13da.htm"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-06-22",
+                        "reportDate":  "2023-06-21",
+                        "accession":  "0000899243-23-016218",
+                        "primaryDoc":  "xslF345X04/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-06-09",
+                        "reportDate":  "2023-06-05",
+                        "accession":  "0001728451-23-000004",
+                        "primaryDoc":  "xslF345X04/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-05-30",
+                        "reportDate":  "2023-05-25",
+                        "accession":  "0000899243-23-014128",
+                        "primaryDoc":  "xslF345X04/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-05-18",
+                        "reportDate":  "2023-05-16",
+                        "accession":  "0000899243-23-013283",
+                        "primaryDoc":  "xslF345X04/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-05-15",
+                        "reportDate":  "2023-05-11",
+                        "accession":  "0000899243-23-013028",
+                        "primaryDoc":  "xslF345X04/doc4.xml"
+                    },
+                    {
+                        "form":  "13F-HR",
+                        "filingDate":  "2023-05-15",
+                        "reportDate":  "2023-03-31",
+                        "accession":  "0000950123-23-005270",
+                        "primaryDoc":  "xslForm13F_X02/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-05-12",
+                        "reportDate":  "2023-05-09",
+                        "accession":  "0001728451-23-000003",
+                        "primaryDoc":  "xslF345X04/primary_doc.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-03-27",
+                        "reportDate":  "2023-03-23",
+                        "accession":  "0000899243-23-009754",
+                        "primaryDoc":  "xslF345X04/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-03-21",
+                        "reportDate":  "2023-03-17",
+                        "accession":  "0001081316-23-000009",
+                        "primaryDoc":  "xslF345X04/wf-form4_167942916524621.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-03-15",
+                        "reportDate":  "2023-03-13",
+                        "accession":  "0000899243-23-008649",
+                        "primaryDoc":  "xslF345X03/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-03-07",
+                        "reportDate":  "2023-03-03",
+                        "accession":  "0000899243-23-007400",
+                        "primaryDoc":  "xslF345X03/doc4.xml"
+                    },
+                    {
+                        "form":  "4",
+                        "filingDate":  "2023-03-03",
+                        "reportDate":  "2023-03-02",
+                        "accession":  "0001728451-23-000002",
+                        "primaryDoc":  "xslF345X03/primary_doc.xml"
+                    },
+                    {
+                        "form":  "10-K",
+                        "filingDate":  "2023-02-27",
+                        "reportDate":  "2022-12-31",
+                        "accession":  "0000950170-23-004451",
+                        "primaryDoc":  "brka-20221231.htm"
+                    }
+                ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "2.0",
+  "generated": "2026-10-17",
+  "note": "全部阈值默认 signal_only。provenance != buffett_verbatim 者 decision_weight 不得为 veto（validate.py 强制）。",
+  "thresholds": [
+    { "id": "T-roic-10y", "metric": "ROIC 10年均值", "value": 0.15, "direction": ">=", "provenance": "skill_author", "source_refs": [], "source_refs_status": "missing", "decision_weight": "signal_only", "known_conflict": "巴菲特从未给出数字阈值；早期高增长或轻资产行业会失真", "override_rule": "命中冲突时降级 context" },
+    { "id": "T-cash-conversion", "metric": "现金转换率 OCF/净利", "value": 0.90, "direction": ">=", "provenance": "skill_author", "source_refs": [], "source_refs_status": "missing", "decision_weight": "signal_only", "known_conflict": "重资本开支年份天然偏低", "override_rule": "命中冲突时降级 context" },
+    { "id": "T-leverage-ebitda", "metric": "有息负债 / EBITDA", "value": 2.0, "direction": "<=", "provenance": "skill_author", "source_refs": [], "source_refs_status": "missing", "decision_weight": "signal_only", "known_conflict": "重资产行业（铁路/公用事业/电信）不适用；巴菲特 2010 收购 BNSF 即高杠杆", "override_rule": "命中冲突时降级 context，不得计入否决" },
+    { "id": "T-interest-coverage", "metric": "利息覆盖倍数", "value": 5.0, "direction": ">=", "provenance": "skill_author", "source_refs": [], "source_refs_status": "missing", "decision_weight": "signal_only", "known_conflict": "浮存金型保险不适用（浮存金非有息负债）", "override_rule": "命中冲突时降级 context" },
+    { "id": "T-mos-tier", "metric": "安全边际折价分档", "value": "20-30 / 30-40 / 40-50 %", "direction": "tiered", "provenance": "skill_author", "source_refs": ["letter:1992 (方向 verified_web；百分比无出处)"], "source_refs_status": "verified_web", "decision_weight": "signal_only", "known_conflict": "1992 信确认必须有折价（cornerstone），但从未给出百分比；1989 后折价可小于 Graham 标准", "override_rule": "仅作提示，不得作为否决依据" },
+    { "id": "T-nonrecurring-ratio", "metric": "非经常性损益 / 净利润", "value": 0.30, "direction": "<=", "provenance": "practice_derived", "source_refs": ["local: 匿名化A股传媒公司案例（2026H1 坏账转回占净利33%；公司名与代码已按用户要求于2026-10-17移除）"], "source_refs_status": "verified_local", "decision_weight": "signal_only", "known_conflict": "一次性处置收益为主的年份需人工判断方向", "override_rule": "超阈值触发 C-earnings-quality 复核，不直接否决" },
+    { "id": "T-goodwill-net-assets", "metric": "商誉 / 归母净资产", "value": 0.50, "direction": "<=", "provenance": "buffett_implied", "source_refs": ["skill:references/03-business-moat.md (economic vs accounting goodwill)"], "source_refs_status": "verified_local", "decision_weight": "signal_only", "known_conflict": "他的 economic goodwill 恰在表外；表内商誉高多来自并购 => 触发复核而非否决", "override_rule": "超阈值触发并购史复核" },
+    { "id": "T-receivables-net-assets", "metric": "(应收+预付) / 归母净资产", "value": 3.0, "direction": "<=", "provenance": "practice_derived", "source_refs": ["local: 匿名化A股传媒公司案例（应收+预付=7x归母净资产；公司名与代码已按用户要求于2026-10-17移除）"], "source_refs_status": "verified_local", "decision_weight": "signal_only", "known_conflict": "供应链金融/平台型商业模式天然高应收", "override_rule": "超阈值触发 C-earnings-quality 与账期复核" },
+    { "id": "T-customer-concentration", "metric": "第一大客户收入占比", "value": 0.50, "direction": "<=", "provenance": "practice_derived", "source_refs": ["local: 匿名化A股传媒公司案例（前五客户集中度未披露；公司名与代码已按用户要求于2026-10-17移除）"], "source_refs_status": "verified_local", "decision_weight": "signal_only", "known_conflict": "to-B 单一巨头绑定模式（如苹果链）需单独判断", "override_rule": "未披露 => 直接 uncertain，不得猜" }
+  ]
+}
