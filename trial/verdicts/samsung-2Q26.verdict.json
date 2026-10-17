@@ -72,7 +72,7 @@
     }
   ],
   "criteria": {
-    "gate_C-circle-competence": {
+    "C-circle-competence": {
       "status": "pass",
       "evidence": "DS 占收入 74%，生意可一段话解释",
       "tags": [],
@@ -255,9 +255,9 @@
     "C-sell-4-better-opportunity"
   ],
   "notes_applied": [
+    "C-circle-competence",
     "C-institutional-imperative",
     "C-moat-replicability",
-    "C-pricing-power",
-    "gate_C-circle-competence"
+    "C-pricing-power"
   ]
 }

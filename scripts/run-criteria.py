@@ -163,7 +163,7 @@ class Judge:
         ids = [c["id"] for c in crit["criteria"]]
         # gate (analyst-only by design)
         gate = self.notes.get("C-circle-competence", {}).get("status", "not_scorable")
-        self.res["gate_C-circle-competence"] = {"status": gate,
+        self.res["C-circle-competence"] = {"status": gate,
             "evidence": self.notes.get("C-circle-competence", {}).get("justification", ""),
             "tags": [], "auto_status": "not_scorable", "annotated": "C-circle-competence" in self.notes}
         if gate != "pass":

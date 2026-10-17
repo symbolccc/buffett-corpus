@@ -39,7 +39,7 @@
     }
   ],
   "criteria": {
-    "gate_C-circle-competence": {
+    "C-circle-competence": {
       "status": "pass",
       "evidence": "存储纯 play，可一段话解释",
       "tags": [],
@@ -225,9 +225,9 @@
     "C-sell-4-better-opportunity"
   ],
   "notes_applied": [
+    "C-circle-competence",
     "C-debt-survival",
     "C-moat-replicability",
-    "C-pricing-power",
-    "gate_C-circle-competence"
+    "C-pricing-power"
   ]
 }
