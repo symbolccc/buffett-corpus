@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-10-18",
+  "rule": "只收经 HTTP 验证的链接；验证方式列在 check 字段。无验证=不入库。全网无结构化索引（SOURCES.md §3），本文件是第一个骨架。",
+  "verified_sources": [
+    { "name": "CNBC Warren Buffett Archive", "url": "https://buffett.cnbc.com/", "check": "HTTP 200 @2026-10-18", "coverage": "1994-2025 年会视频+文字稿（版权 CNBC，只链不搬）" },
+    { "name": "berkshiredata.cloud Annual Meetings", "url": "https://berkshiredata.cloud/", "check": "HTTP 200 @2026-10-18", "coverage": "1994-2026 年会文字稿+中文（URL 由 JS 生成，深层路径待探测后逐条验证补入）" },
+    { "name": "wongzijie fork 备份", "url": "https://github.com/symbolccc/buffett-archive", "check": "fork 成功 @2026-10-18", "coverage": "459 篇文档含 317 篇访谈/大会转录（未认证语料，🔴级）" }
+  ],
+  "entries": [],
+  "entries_policy": {
+    "fields": ["id","title","date","venue","video_ref","transcript_ref","duration","speaker_attribution","quote_verified","notes"],
+    "video_ref_rule": "必须 oEmbed/HTTP 验证后填入；2026-10-18 有 7 个候选视频 ID 全部验证失败（未入库），禁止凭记忆填 ID"
+  },
+  "next_actions_when_network_stable": [
+    "1. yt-dlp flat-playlist 取 CNBC Archive 全部 3000 页视频目录并 oEmbed 验证",
+    "2. berkshiredata.cloud 探测 JS 数据路径后抓 1994-2026 文字稿入 corpus/meetings/",
+    "3. 大学演讲逐条建 entries（1998 佛大、1996 北卡、2003 内大、哈佛、斯坦福等）"
+  ]
+}
