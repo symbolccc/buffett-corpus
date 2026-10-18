@@ -30,3 +30,31 @@
 - 证据不足的结论输出 uncertain，禁止用常识脑补 TA 的立场。
 - 一切模仿语气生成的内容，必须声明"模拟风格，非本人言论"。
 - 在世人物注意诽谤与隐私风险；默认私有使用，不对外分发。
+
+## 有界代表集（先定边界再采集）
+
+采集前先拍板代表集，避免无底洞：如"最近 30 项公开内容"、"2024-2025 全部长文"、"5 个代表作案例"（借鉴 personal-distillation-skill）。
+
+## 采集适配器（借鉴 WeClone 端到端思路）
+
+| 来源 | 进 indexes 的方式 |
+| :-- | :-- |
+| 官网文集/专栏 | URL 逐条 HTTP 验证后入 letters/writings 索引 |
+| 视频（B站/YouTube） | 播放页实测 200 → 入 speeches/interviews 索引；官方优先，第三方上传标 🔴 |
+| 聊天记录（微信等） | 私人语料只进本地检索层，永不进公开仓库 |
+| 播客/访谈 | 音轨→文字稿后按 🔴 处理，引用回原音频核对 |
+
+## 验收测试（借鉴 personal-distillation acceptance test）
+
+蒸馏完成后出 10 道验收题（人物事迹/观点/判断风格各若干），每道题的答案必须能指回具体 source id；指不回的条目回炉或标 unverified。
+
+## 借鉴登记（谁的结构进了本模板）
+
+| 本模板的部分 | 借鉴对象 | 借鉴内容 |
+| :-- | :-- | :-- |
+| 记忆分层协议（SKILL.md §8） | Second-Me | L0-L2 分层记忆思想（证据适配版：跨会话记忆必须先入库） |
+| 写入即提案（SKILL.md §9） | Personal-Ontology | 提案门禁式修订 + maturity 三级（seed/corroborated/validated） |
+| 有界代表集 + 验收测试 | personal-distillation-skill / EnterBoom | 先定边界再采集；testable hypotheses；10 题验收 |
+| negative_constraints / knowledge_boundaries 字段 | yorishiro | SOUL.md 的负面约束与信息边界 |
+| 采集适配器表 | WeClone | 端到端管线思想（仅结构，不搬其微调路线） |
+| provenance 四值 + 言行对照 + 反例库 | 自创 | 竞品均无 |
