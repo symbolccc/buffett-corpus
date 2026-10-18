@@ -19,6 +19,14 @@ class TestSamsung(unittest.TestCase):
         self.assertEqual(self.v["overall"], "需人工核验")
     def test_gate_pass(self):
         self.assertEqual(self.v["criteria"]["C-circle-competence"]["status"], "pass")
+    def test_criteria_canon_exact_20_no_phantom(self):
+        self.assertNotIn("C-receivables-risk", self.v["criteria"])
+        self.assertIn("C-receivables-risk", self.v["sub_checks"])
+        self.assertEqual(len(self.v["criteria"]), 20)
+    def test_same_status_note_recorded_not_dropped(self):
+        c = self.v["criteria"]["C-mgmt-integrity"]
+        self.assertTrue(c["annotated"])
+        self.assertTrue(c["evidence"].startswith("analyst: "))
     def test_earnings_quality_pass_with_tag(self):
         c = self.v["criteria"]["C-earnings-quality"]
         self.assertEqual(c["status"], "pass")
@@ -56,7 +64,7 @@ class TestSKHynix(unittest.TestCase):
     def test_not_disclosed_at_least_12(self):
         self.assertGreaterEqual(len(self.v["field_handling"]["not_disclosed"]), 8)  # 12/26 per release-gap note; verdict counts explicit fields
     def test_customer_concentration_uncertain_no_guess(self):
-        self.assertEqual(self.v["criteria"]["C-customer-risk"]["status"], "uncertain")
+        self.assertEqual(self.v["sub_checks"]["C-customer-risk"]["status"], "uncertain")
 
 if __name__ == "__main__":
     unittest.main()
