@@ -74,22 +74,6 @@
       "auto_status": "uncertain",
       "annotated": true
     },
-    "C-receivables-risk": {
-      "status": "uncertain",
-      "evidence": "inputs not_disclosed",
-      "tags": [
-        "missing_inputs"
-      ],
-      "auto_status": "uncertain",
-      "annotated": false
-    },
-    "C-customer-risk": {
-      "status": "uncertain",
-      "evidence": "top1 concentration not_disclosed",
-      "tags": [],
-      "auto_status": "uncertain",
-      "annotated": false
-    },
     "C-inversion": {
       "status": "uncertain",
       "evidence": "needs analyst top-3 loss paths",
@@ -120,10 +104,10 @@
     },
     "C-moat-trend": {
       "status": "uncertain",
-      "evidence": "needs >=5y margin/share trend (cyclical confusion guard)",
+      "evidence": "analyst: 周期混淆",
       "tags": [],
       "auto_status": "uncertain",
-      "annotated": false
+      "annotated": true
     },
     "C-pricing-power": {
       "status": "pass",
@@ -203,11 +187,23 @@
       "annotated": false
     }
   },
+  "sub_checks": {
+    "C-receivables-risk": {
+      "status": "uncertain",
+      "evidence": "inputs not_disclosed",
+      "tags": [
+        "missing_inputs"
+      ]
+    },
+    "C-customer-risk": {
+      "status": "uncertain",
+      "evidence": "top1 concentration not_disclosed",
+      "tags": []
+    }
+  },
   "review_needed_criteria": [
     "C-earnings-quality",
     "C-owner-earnings",
-    "C-receivables-risk",
-    "C-customer-risk",
     "C-inversion",
     "C-time-horizon",
     "C-durability",
@@ -228,6 +224,7 @@
     "C-circle-competence",
     "C-debt-survival",
     "C-moat-replicability",
+    "C-moat-trend",
     "C-pricing-power"
   ]
 }
