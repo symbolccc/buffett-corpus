@@ -11,7 +11,17 @@
         "name": { "type": "string" },
         "aliases": { "type": "array", "items": { "type": "string" } },
         "fields": { "type": "array", "items": { "type": "string" } },
-        "status": { "enum": ["living", "deceased", "unknown"] }
+        "status": { "enum": ["living", "deceased", "unknown"] },
+        "negative_constraints": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "TA 绝不会做/绝不会说的话（borrowed: yorishiro SOUL.md Negative Constraints）"
+        },
+        "knowledge_boundaries": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "TA 知道/不知道的信息边界（borrowed: yorishiro World Knowledge）"
+        }
       }
     },
     "sources": {
@@ -40,10 +50,31 @@
           "provenance": { "enum": ["person_verbatim", "person_implied", "editor_analyst", "practice_derived"] },
           "source_ids": { "type": "array", "items": { "type": "string" } },
           "first_appearance": { "type": "string" },
+          "maturity": {
+            "enum": ["seed", "corroborated", "validated"],
+            "description": "按独立来源家族计数升级，不按重复次数投票（borrowed: Personal-Ontology）"
+          },
           "counter_examples": { "type": "array", "items": { "type": "string" } },
-          "known_conflict": { "type": "string" }
+          "known_conflict": { "type": "string" },
+          "stage_note": { "type": "string", "description": "该原则适用于 TA 的哪个阶段、后来是否改变及原因（borrowed: personal-distillation 时间线）" }
         }
       }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "statement": { "type": "string" },
+          "status": { "enum": ["proposed", "supported", "refuted"] },
+          "evidence_source_ids": { "type": "array", "items": { "type": "string" } },
+          "created": { "type": "string" },
+          "last_reviewed": { "type": "string" }
+        }
+      },
+      "description": "可检验的猜想：先挂起，找到证据再升级或证伪（borrowed: personal-distillation testable hypotheses）"
     },
     "quotes": {
       "type": "array",
