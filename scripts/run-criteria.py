@@ -45,6 +45,7 @@ class Judge:
         self.fm = fmap(fin)
         self.log = []
         self.res = {}
+        self.subs = {}
         self.missing, self.lowconf = [], []
         for k, f in self.fm.items():
             if isinstance(f.get("value"), str) and f["value"] in MISSING:
@@ -56,11 +57,19 @@ class Judge:
         auto = status
         n = self.notes.get(cid)
         annotated = False
-        if n and n.get("status") != status:
-            status = n["status"]; annotated = True
-            evidence = "analyst: " + n.get("justification", "")
+        if n:
+            annotated = True
+            if n.get("status"):
+                status = n["status"]
+            j = n.get("justification", "")
+            if j:
+                evidence = "analyst: " + j
         self.res[cid] = {"status": status, "evidence": evidence,
                          "tags": tags or [], "auto_status": auto, "annotated": annotated}
+
+    def sub(self, sid, status, evidence, tags=None):
+        """threshold-driven sub-check: NOT a canonical criterion, kept out of `criteria`"""
+        self.subs[sid] = {"status": status, "evidence": evidence, "tags": tags or []}
 
     def firing(self, tid, observed, action):
         t = self.thr[tid]
@@ -146,16 +155,16 @@ class Judge:
             rr = (ar + (pre if pre is not None and pre_ok else 0.0)) / na
             self.firing("T-receivables-net-assets", rr, "within bound" if rr <= 3.0 else "excess->review")
             tg = [] if pre is not None else ["prepayments_not_disclosed"]
-            self.set("C-receivables-risk", "pass" if rr <= self.thr["T-receivables-net-assets"]["value"] else "uncertain",
+            self.sub("C-receivables-risk", "pass" if rr <= self.thr["T-receivables-net-assets"]["value"] else "uncertain",
                      "(AR+pre)/NA={0}".format(round(rr, 3)), tg)
         else:
-            self.set("C-receivables-risk", "uncertain", "inputs not_disclosed", ["missing_inputs"])
+            self.sub("C-receivables-risk", "uncertain", "inputs not_disclosed", ["missing_inputs"])
         cc_top, cc_ok, _ = num(self.fm, "customer_concentration_top1")
         if cc_top is None:
             self.firing("T-customer-concentration", -1, "not_disclosed -> uncertain (rule: no guessing)")
-            self.set("C-customer-risk", "uncertain", "top1 concentration not_disclosed")
+            self.sub("C-customer-risk", "uncertain", "top1 concentration not_disclosed")
         else:
-            self.set("C-customer-risk", "pass" if cc_top <= 0.5 else "uncertain",
+            self.sub("C-customer-risk", "pass" if cc_top <= 0.5 else "uncertain",
                      "top1={0}".format(cc_top))
 
     def run(self):
@@ -219,6 +228,7 @@ class Judge:
                                 "rule": "conf<0.9 or not_disclosed never counts as evidence"},
             "threshold_firing": self.log,
             "criteria": self.res,
+            "sub_checks": self.subs,
             "review_needed_criteria": review_needed,
             "notes_applied": sorted([k for k, v in self.res.items() if v.get("annotated")]),
         }
