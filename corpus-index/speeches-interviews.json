@@ -1,56 +1,20 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.0",
   "generated": "2026-10-18",
-  "rule": "只收 HTTP 实测通过的链接（验证方式写在 check 字段）；第三方上传一律 tier=red，引用前必须回官方源逐字核对。",
+  "rule": "只收经 HTTP 验证的链接；验证方式列在 check 字段。无验证=不入库。全网无结构化索引（SOURCES.md §3），本文件是第一个骨架。",
   "verified_sources": [
-    { "name": "CNBC Warren Buffett Archive", "url": "https://buffett.cnbc.com/", "check": "HTTP 200 @2026-10-18", "note": "年会与采访全量，版权 CNBC，只链不搬（详见 meetings.json）" },
-    { "name": "berkshiredata.cloud", "url": "https://berkshiredata.cloud/", "check": "HTTP 200 @2026-10-18", "note": "1994-2026 年会文字稿（URL 由 JS 生成，深层路径待逆出）" },
-    { "name": "wongzijie fork 备份", "url": "https://github.com/symbolccc/buffett-archive", "check": "fork 成功 @2026-10-18", "note": "459 篇含 317 篇访谈/大会转录，作者自声明未做说话人认证（🔴）" }
+    { "name": "CNBC Warren Buffett Archive", "url": "https://buffett.cnbc.com/", "check": "HTTP 200 @2026-10-18", "coverage": "1994-2025 年会视频+文字稿（版权 CNBC，只链不搬）" },
+    { "name": "berkshiredata.cloud Annual Meetings", "url": "https://berkshiredata.cloud/", "check": "HTTP 200 @2026-10-18", "coverage": "1994-2026 年会文字稿+中文（URL 由 JS 生成，深层路径待探测后逐条验证补入）" },
+    { "name": "wongzijie fork 备份", "url": "https://github.com/symbolccc/buffett-archive", "check": "fork 成功 @2026-10-18", "coverage": "459 篇文档含 317 篇访谈/大会转录（未认证语料，🔴级）" }
   ],
-  "entries": [
-    {
-      "id": "S-1998-florida",
-      "title": "University of Florida Speech & Q&A（佛罗里达大学演讲）",
-      "date": "1998-10-15",
-      "venue": "University of Florida School of Business",
-      "tier": "red_third_party_local_only",
-      "video_refs": [
-        { "platform": "bilibili", "url": "https://www.bilibili.com/video/BV1nrnZzAE5C/", "check": "HTTP 200 @2026-10-18" },
-        { "platform": "bilibili", "url": "https://www.bilibili.com/video/av331859873/", "check": "HTTP 200 @2026-10-18" },
-        { "platform": "bilibili", "url": "https://www.bilibili.com/video/BV1pg7szeE3c/", "check": "HTTP 200 @2026-10-18" }
-      ],
-      "transcript_refs": [
-        { "platform": "xueqiu", "note": "多个中文全文转录帖存在（搜索实测可见），未逐条验证，引用前回视频核对", "check": "unverified" }
-      ],
-      "speaker_attribution": "unverified（第三方上传）",
-      "quote_verified": false,
-      "notes": "段永平/李录多次公开推崇的经典 Q&A；官方原片未见公开渠道，若找到升级 tier"
-    },
-    {
-      "id": "D-2018-icon-documentary",
-      "title": "Warren Buffett: Investor, Teacher, Icon（CNBC 纪录片）",
-      "date": "2018-05-07",
-      "tier": "yellow_link_plus_short_quote",
-      "video_refs": [
-        { "platform": "cnbc", "url": "https://buffett.cnbc.com/video/2018/05/07/warren-buffett-investor-teacher-icon-documentary.html", "check": "href 实提取 @2026-10-18" }
-      ],
-      "quote_verified": false,
-      "notes": "CNBC 版权，只链不搬"
-    },
-    {
-      "id": "I-2026-mid-meeting-interview",
-      "title": "Buffett mid-meeting live interview（2026 年会午间专访）",
-      "date": "2026-05-04",
-      "tier": "yellow_link_plus_short_quote",
-      "video_refs": [
-        { "platform": "cnbc", "url": "https://buffett.cnbc.com/video/2026/05/04/warren-buffetts-mid-meeting-live-interview.html", "check": "href 实提取 @2026-10-18" }
-      ],
-      "quote_verified": false
-    }
-  ],
+  "entries": [],
+  "entries_policy": {
+    "fields": ["id","title","date","venue","video_ref","transcript_ref","duration","speaker_attribution","quote_verified","notes"],
+    "video_ref_rule": "必须 oEmbed/HTTP 验证后填入；2026-10-18 有 7 个候选视频 ID 全部验证失败（未入库），禁止凭记忆填 ID"
+  },
   "next_actions_when_network_stable": [
-    "逐条验证 1996 北卡/2003 内布拉斯加/哈佛等经典演讲的真实视频源后补入 entries",
-    "berkshiredata.cloud JS 数据路径逆出后抓 1994-2026 文字稿",
-    "yt-dlp flat-playlist 拉 CNBC Archive 视频目录逐条 oEmbed 验证"
+    "1. yt-dlp flat-playlist 取 CNBC Archive 全部 3000 页视频目录并 oEmbed 验证",
+    "2. berkshiredata.cloud 探测 JS 数据路径后抓 1994-2026 文字稿入 corpus/meetings/",
+    "3. 大学演讲逐条建 entries（1998 佛大、1996 北卡、2003 内大、哈佛、斯坦福等）"
   ]
 }
