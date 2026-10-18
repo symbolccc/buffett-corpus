@@ -9,9 +9,7 @@
 <person>-corpus/
 ├── corpus-index/          # ① 索引层：sources/works/speeches/interviews 元数据+官方直链
 ├── person/
-│   ├── profile.json       #     人格档案（按 schema/person.schema.json）
-│   ├── speech-fingerprint.json  # 语言指纹：口头禅、句式、禁忌
-│   └── decision-patterns.json   # 稳定模式/重复卡点/认知盲区
+│   └── profile.json       #     人格档案：含语言指纹、稳定模式、矛盾与修订日志（字段按 schema/person.schema.json）
 ├── criteria/              # ② 判据层：TA 的判断框架（每条带 provenance）
 ├── track-record/          # ③ 言行对照层：TA 说的 vs TA 做的
 ├── SKILL.md               # ④ Agent 定义：任何支持技能的 AI 直接挂载
