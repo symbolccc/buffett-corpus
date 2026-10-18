@@ -36,3 +36,7 @@ decision_weight 枚举：gate | veto | core | signal_only | context
 - EDGAR submissions recent 窗口只回溯到 2017-02-09（实测）
 - 官网无 1965–1976 信件；1971 年信任何已知公开档案都没有
 - A股/港股无 EDGAR 等价物，层0 输入解析为半人工
+
+## 通用化与工具
+- person-agent-template/  通用"炼化人"模板：换一个人照五步填数据，即得专属 Agent（SKILL.md 可直接挂载）
+- TOOLS.md  仓库体检与导出工具链：repomix 打包、gitingest 速览、lychee 死链检查、CI 激活步骤
