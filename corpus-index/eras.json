@@ -1,0 +1,52 @@
+{
+ "schema_version": "1.0",
+ "updated": "2026-10-20",
+ "note": "时代分期层：巴菲特的判据不是铁板一块，不同时期语言与适用规则不同。分期框架为编辑者归纳（provenance=editorial），但每个分期都用信件原文锚点钉住。任何分析先确定目标处在哪个分期。",
+ "eras": [
+  {
+   "id": "E1-apprentice",
+   "name": "学徒与挣扎期（纺织与保险成型）",
+   "span": "1977-1984",
+   "decision_rule": "此期信中内在价值口径尚未定型，纺织挣扎贯穿；保险浮存金逻辑在此期成型。引用此期原文做决策依据时，需检查后续年份是否推翻。",
+   "anchors": [
+    {"letter": 1977, "claim": "纺织误判与商品化本质已现", "quote_hint": "We have mistakenly predicted"},
+    {"letter": 1978, "claim": "商品化行业教科书式教训", "quote_hint": "The textile industry illustrates in textbook style"}
+   ]
+  },
+  {
+   "id": "E2-synthesis",
+   "name": "体系成型期（从烟蒂到好生意）",
+   "span": "1985-1999",
+   "decision_rule": "20 条判据中的多数核心判据在此期成形并公开定义（owner earnings 1986、能力圈 1996、机构强制力 1989、wonderful-at-fair 1989）。分析新公司时以此期口径为主判据。",
+   "anchors": [
+    {"letter": 1986, "claim": "owner earnings 正式定义", "quote_hint": "Owner earnings"},
+    {"letter": 1989, "claim": "wonderful company at a fair price + 芒格功劳", "quote_hint": "Charlie understood this early"},
+    {"letter": 1996, "claim": "能力圈正面定义", "quote_hint": "correctly evaluate selected businesses"}
+   ]
+  },
+  {
+   "id": "E3-mature",
+   "name": "成熟期（认错与回购）",
+   "span": "2000-2024",
+   "decision_rule": "大规模认错密集出现（Dexter 2007、ConocoPhillips 2008），反例库主要锚定此期。回购成为资本配置主要工具；投资经理 Todd/Combs 接管部分持仓，持仓解读需先做归属判断。",
+   "anchors": [
+    {"letter": 2007, "claim": "Dexter 认错：股票支付把 4 亿变 35 亿", "quote_hint": "an even worse mistake"},
+    {"letter": 2008, "claim": "ConocoPhillips 顶价买入自述", "quote_hint": "Without urging from Charlie or anyone else"},
+    {"letter": 2014, "claim": "伟大公司部分所有权优于平庸公司全部所有权", "quote_hint": "Hope Diamond"}
+   ]
+  },
+  {
+   "id": "E4-abel",
+   "name": "交接期（Abel 执政）",
+   "span": "2026-",
+   "decision_rule": "2026-02 起 Greg Abel 接任 CEO（事实见 preset）。此期持仓变化、增持减持不得直接用巴菲特判据解读；必须声明分期并用 E4 规则：视为 Abel 决策，标注 attribution=abel。",
+   "anchors": [
+    {"source": "preset:buffett.preset.json", "claim": "Abel 2026-02 接任；持仓 42→29；四大核心持仓重定义"}
+   ]
+  }
+ ],
+ "known_gaps": [
+  "2025 年全年信件在语料边界上（官网 2024 为最后收录年信），2025 年事件按 filing 与新闻源另行标注",
+  "E1-E3 边界年份为编辑者归纳，非巴菲特本人自述分期；锚点原话可验证，边界年份可能±1 年误差"
+ ]
+}

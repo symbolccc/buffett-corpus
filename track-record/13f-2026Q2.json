@@ -1,87 +1,90 @@
 {
-    "period":  "2026-06-30",
-    "filed":  "2026-08-14",
-    "accession":  "0001193125-26-352200",
-    "source":  "SEC EDGAR CIK 0001067983 infotable 56757.xml",
-    "unit":  "USD (whole dollars, SEC 13F rule since 2023-01)",
-    "positions_raw":  89,
-    "unique_issuers":  26,
-    "top15":  [
-                  {
-                      "issuer":  "APPLE INC",
-                      "pct_of_total":  0.2204,
-                      "value_usd":  65950296923
-                  },
-                  {
-                      "issuer":  "AMERICAN EXPRESS CO",
-                      "pct_of_total":  0.1714,
-                      "value_usd":  51282319275
-                  },
-                  {
-                      "issuer":  "ALPHABET INC",
-                      "pct_of_total":  0.1262,
-                      "value_usd":  37764088383
-                  },
-                  {
-                      "issuer":  "COCA COLA CO",
-                      "pct_of_total":  0.1086,
-                      "value_usd":  32508000000
-                  },
-                  {
-                      "issuer":  "BANK OF AMER CORP",
-                      "pct_of_total":  0.092,
-                      "value_usd":  27543790975
-                  },
-                  {
-                      "issuer":  "CHEVRON CORPORATION",
-                      "pct_of_total":  0.0467,
-                      "value_usd":  13986141890
-                  },
-                  {
-                      "issuer":  "OCCIDENTAL PETE CORP",
-                      "pct_of_total":  0.043,
-                      "value_usd":  12868205304
-                  },
-                  {
-                      "issuer":  "CHUBB LIMITED",
-                      "pct_of_total":  0.039,
-                      "value_usd":  11670066615
-                  },
-                  {
-                      "issuer":  "MOODYS CORP",
-                      "pct_of_total":  0.0373,
-                      "value_usd":  11173435852
-                  },
-                  {
-                      "issuer":  "KRAFT HEINZ CO",
-                      "pct_of_total":  0.0257,
-                      "value_usd":  7691494401
-                  },
-                  {
-                      "issuer":  "DAVITA INC",
-                      "pct_of_total":  0.0215,
-                      "value_usd":  6425268898
-                  },
-                  {
-                      "issuer":  "DELTA AIR LINES INC",
-                      "pct_of_total":  0.0179,
-                      "value_usd":  5368591200
-                  },
-                  {
-                      "issuer":  "SIRIUSXM HOLDINGS INC",
-                      "pct_of_total":  0.0123,
-                      "value_usd":  3686802237
-                  },
-                  {
-                      "issuer":  "VERISIGN INC",
-                      "pct_of_total":  0.0076,
-                      "value_usd":  2261494212
-                  },
-                  {
-                      "issuer":  "KROGER CO",
-                      "pct_of_total":  0.0072,
-                      "value_usd":  2165670000
-                  }
-              ],
-    "total_value_usd":  299253556246
+ "period": "2026-06-30",
+ "filed": "2026-08-14",
+ "accession": "0001193125-26-352200",
+ "source": "SEC EDGAR CIK 0001067983 infotable 56757.xml",
+ "unit": "USD (whole dollars, SEC 13F rule since 2023-01)",
+ "positions_raw": 89,
+ "unique_issuers": 26,
+ "top15": [
+  {
+   "issuer": "APPLE INC",
+   "pct_of_total": 0.2204,
+   "value_usd": 65950296923
+  },
+  {
+   "issuer": "AMERICAN EXPRESS CO",
+   "pct_of_total": 0.1714,
+   "value_usd": 51282319275
+  },
+  {
+   "issuer": "ALPHABET INC",
+   "pct_of_total": 0.1262,
+   "value_usd": 37764088383
+  },
+  {
+   "issuer": "COCA COLA CO",
+   "pct_of_total": 0.1086,
+   "value_usd": 32508000000
+  },
+  {
+   "issuer": "BANK OF AMER CORP",
+   "pct_of_total": 0.092,
+   "value_usd": 27543790975
+  },
+  {
+   "issuer": "CHEVRON CORPORATION",
+   "pct_of_total": 0.0467,
+   "value_usd": 13986141890
+  },
+  {
+   "issuer": "OCCIDENTAL PETE CORP",
+   "pct_of_total": 0.043,
+   "value_usd": 12868205304
+  },
+  {
+   "issuer": "CHUBB LIMITED",
+   "pct_of_total": 0.039,
+   "value_usd": 11670066615
+  },
+  {
+   "issuer": "MOODYS CORP",
+   "pct_of_total": 0.0373,
+   "value_usd": 11173435852
+  },
+  {
+   "issuer": "KRAFT HEINZ CO",
+   "pct_of_total": 0.0257,
+   "value_usd": 7691494401
+  },
+  {
+   "issuer": "DAVITA INC",
+   "pct_of_total": 0.0215,
+   "value_usd": 6425268898
+  },
+  {
+   "issuer": "DELTA AIR LINES INC",
+   "pct_of_total": 0.0179,
+   "value_usd": 5368591200
+  },
+  {
+   "issuer": "SIRIUSXM HOLDINGS INC",
+   "pct_of_total": 0.0123,
+   "value_usd": 3686802237
+  },
+  {
+   "issuer": "VERISIGN INC",
+   "pct_of_total": 0.0076,
+   "value_usd": 2261494212
+  },
+  {
+   "issuer": "KROGER CO",
+   "pct_of_total": 0.0072,
+   "value_usd": 2165670000
+  }
+ ],
+ "total_value_usd": 299253556246,
+ "unique_cusips": 29,
+ "count_note": "26=去重 nameOfIssuer；29=去重 CUSIP（Alphabet A/C、Liberty Live 系列、NYT MTN 等同发行人多 CUSIP）。商业站（13f.info/thetrading.tools）报 29 按 CUSIP 计。",
+ "source_verified": "2026-10-20 重新下载 infotable 56757.xml 核对：89 行 / 26 发行人 / 29 CUSIP / 总值 299253556246 全部一致"
 }

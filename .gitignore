@@ -1,3 +1,7 @@
 .github/workflows/
 __pycache__/
 *.pyc
+
+# 本地备份不进仓
+*.bak
+*.bak-*

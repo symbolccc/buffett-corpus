@@ -1,0 +1,86 @@
+{
+ "schema_version": "1.0",
+ "updated": "2026-10-20",
+ "note": "概念归属层：巴菲特体系里每个关键概念到底是谁的。防止把别人的智慧笼统归给巴菲特。证据全部来自 48 封股东信明文（2026-10-20 回源核验），引用均 ≤50 词。",
+ "attribution": [
+  {
+   "id": "A-margin-of-safety",
+   "concept": "安全边际",
+   "originator": "Benjamin Graham",
+   "relationship": "borrowed_core",
+   "evidence": [
+    {"letter": 1990, "quote": "Confronted with a challenge to distill the secret of sound investment into three words, we venture the motto, Margin of Safety. Forty-two years after reading that, I still think those are the right three words.", "note": "巴菲特在信中原文引用 Graham（前半句为 Graham 原话），并自述四十二年未变"},
+    {"letter": 1997, "quote": "the margin of safety that Ben Graham identified as the cornerstone of intelligent investing", "note": "明确把安全边际的发明权归给 Graham"}
+   ],
+   "agent_usage_rule": "引用安全边际时出处写 Graham（via Buffett letter:1990/1997），不写为巴菲特原创"
+  },
+  {
+   "id": "A-mr-market",
+   "concept": "市场先生",
+   "originator": "Benjamin Graham",
+   "relationship": "borrowed_core_popularized",
+   "evidence": [
+    {"letter": 1987, "quote": "He said that you should imagine market quotations as coming from a remarkably accommodating fellow named Mr. Market who is your partner in a private business.", "note": "1987 年信 Graham 致敬章节，巴菲特明确转述 Graham 的比喻"}
+   ],
+   "agent_usage_rule": "出处标 Graham（via Buffett letter:1987）；巴菲特的贡献是把一个课堂比喻用成了大众投资语言"
+  },
+  {
+   "id": "A-wonderful-at-fair",
+   "concept": "以合理价格买伟大公司（对烟蒂法的否定）",
+   "originator": "Charlie Munger 推动巴菲特完成转变",
+   "relationship": "co_developed_munger_credit",
+   "evidence": [
+    {"letter": 1989, "quote": "It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price. Charlie understood this early; I was a slow learner.", "note": "巴菲特亲口认领芒格的功劳"}
+   ],
+   "agent_usage_rule": "引用此判据时必须注明芒格推动；不得写成巴菲特顿悟"
+  },
+  {
+   "id": "A-owner-earnings",
+   "concept": "股东盈余",
+   "originator": "Warren Buffett",
+   "relationship": "original_definition",
+   "evidence": [
+    {"letter": 1986, "quote": "Owner earnings ... represent reported earnings plus depreciation, depletion, amortization, and certain other non-cash charges less the average annual amount of capitalized expenditures for plant and equipment, etc. that the business requires.", "note": "1986 年信正式定义（附录）"}
+   ],
+   "agent_usage_rule": "出处标 Buffett letter:1986"
+  },
+  {
+   "id": "A-circle-of-competence",
+   "concept": "能力圈",
+   "originator": "Warren Buffett",
+   "relationship": "original_popularized",
+   "evidence": [
+    {"letter": 1996, "quote": "What an investor needs is the ability to correctly evaluate selected businesses. Note that word selected: you don't have to be an expert on every company, or even many.", "note": "1996 年信对能力圈的正面定义；term_scan 锚点 1996/1999/2001/2013"},
+    {"letter": 1999, "quote": "our circle of competence has expanded only slowly over the years", "note": "圈是边界概念，不是能力宣言"}
+   ],
+   "agent_usage_rule": "出处标 Buffett letter:1996；更早思想源头（Graham 等）未在信中确认，不标注"
+  },
+  {
+   "id": "A-institutional-imperative",
+   "concept": "机构强制力",
+   "originator": "Warren Buffett",
+   "relationship": "original_coined",
+   "evidence": [
+    {"letter": 1989, "quote": "institutional imperative", "note": "term_scan 锚点 1989/1990/2004；1989 年信首次系统阐述该现象"},
+    {"letter": 1990, "quote": "the institutional imperative", "note": "次年继续展开"}
+   ],
+   "agent_usage_rule": "出处标 Buffett letter:1989；用作管理层理性判据的反向检查"
+  },
+  {
+   "id": "A-moat",
+   "concept": "护城河",
+   "originator": "Warren Buffett（商业品质视角受芒格影响）",
+   "relationship": "original_with_munger_influence",
+   "evidence": [
+    {"letter": 1986, "quote": "an economic castle", "note": "城堡与护城河比喻（与护城河成对出现）"},
+    {"letter": 2000, "quote": "our castle's moat", "note": "term_scan 共 28 处，跨年代稳定使用"}
+   ],
+   "agent_usage_rule": "出处标 Buffett（letter:1986 起）；与芒格'好生意'思想的关系参照 A-wonderful-at-fair"
+  }
+ ],
+ "known_gaps": [
+  "能力圈概念的更早思想源头未在信件语料中确认（常见说法为巴菲特自创，但不写无证据的断言）",
+  "四条过滤器（4 filters）出自 Owner's Manual，不在 48 封信语料内，未收录",
+  "芒格独立判据体系（多元思维模型等）不在本仓库范围，需要单独炼化"
+ ]
+}

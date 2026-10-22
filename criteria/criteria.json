@@ -1,504 +1,450 @@
 {
-    "schema_version":  "2.0",
-    "generated":  "2026-10-17",
-    "hard_rules":  [
-                       "decision_weight == veto  =\u003e  provenance must be buffett_verbatim",
-                       "provenance == buffett_verbatim  =\u003e  source_refs must be non-empty",
-                       "decision_weight == gate  =\u003e  provenance in (buffett_verbatim, buffett_implied) and gate_rule and fallback required"
-                   ],
-    "enums":  {
-                  "provenance":  [
-                                     "buffett_verbatim",
-                                     "buffett_implied",
-                                     "skill_author",
-                                     "industry_convention",
-                                     "practice_derived"
-                                 ],
-                  "decision_weight":  [
-                                          "gate",
-                                          "veto",
-                                          "core",
-                                          "signal_only",
-                                          "context"
-                                      ],
-                  "source_refs_status":  [
-                                             "verified_web",
-                                             "verified_local",
-                                             "to_verify",
-                                             "missing"
-                                         ]
-              },
-    "criteria":  [
-                     {
-                         "id":  "C-circle-competence",
-                         "layer":  "mental_positioning",
-                         "question":  "能否用一段话解释这门生意如何赚钱？",
-                         "maps_to_skill":  "Quick Filter Q1 / Path B 步骤1",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/01-thinking-frameworks.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "gate",
-                         "gate_rule":  "不通过则直接输出 not_scorable；其余判据不得继续打分",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-                                                 "CE-airlines"
-                                             ],
-                         "how_to_measure":  "分析者独立写一段生意解释；需依赖外部材料才能写完即视为不通过",
-                         "fallback":  "not_scorable"
-                     },
-                     {
-                         "id":  "C-inversion",
-                         "layer":  "mental_positioning",
-                         "question":  "这笔投资最可能以哪三种方式让我亏钱？",
-                         "maps_to_skill":  "Path B 步骤1 逆向检查",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/01-thinking-frameworks.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "context",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "列出 top3 亏损路径；列不出即视为未理解生意",
-                         "fallback":  "not_scorable"
-                     },
-                     {
-                         "id":  "C-time-horizon",
-                         "layer":  "mental_positioning",
-                         "question":  "是否以持有 10 年的视角在评估，而非本季度涨跌？",
-                         "maps_to_skill":  "Path B 步骤1 时间 horizon",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/01-thinking-frameworks.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "context",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "结论中必须显式写出 10 年视角下的生意终局判断",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-durability",
-                         "layer":  "business_quality",
-                         "question":  "10 年后这家公司是否仍存在且更有竞争力？",
-                         "maps_to_skill":  "Quick Filter Q2",
-                         "provenance":  "skill_author",
-                         "source_refs":  [
-
-                                         ],
-                         "source_refs_status":  "missing",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-                                                 "CE-textile"
-                                             ],
-                         "how_to_measure":  "技术/模式颠覆风险清单 + 行业生命周期判断",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-moat-replicability",
-                         "layer":  "business_quality",
-                         "question":  "竞争者认真投入能否复制其核心优势？",
-                         "maps_to_skill":  "Quick Filter Q3",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/03-business-moat.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-                                                 "track-record:holding-Sees (to_build)"
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "五类护城河（无形/成本/转换/网络/效率规模）逐一排除",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-moat-trend",
-                         "layer":  "business_quality",
-                         "question":  "护城河在变宽、稳定还是变窄？",
-                         "maps_to_skill":  "Path B 步骤2 关键判断",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/03-business-moat.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-                                                 "CE-textile"
-                                             ],
-                         "how_to_measure":  "至少 5 年毛利率/市占率/提价记录趋势",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-pricing-power",
-                         "layer":  "business_quality",
-                         "question":  "提价 5-10% 是否会显著流失客户？",
-                         "maps_to_skill":  "Quick Filter Q4",
-                         "provenance":  "skill_author",
-                         "source_refs":  [
-
-                                         ],
-                         "source_refs_status":  "missing",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-                                                "letter:1989 (wonderful company at fair price, verified_web 2026-10-17)"
-                                            ],
-                         "evidence_action":  [
-                                                 "track-record:holding-KO (to_build)",
-                                                 "track-record:holding-Sees (to_build)"
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "历史提价记录 + 销量弹性；commodity 型直接判 No",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-wonderful-at-fair",
-                         "layer":  "business_quality",
-                         "question":  "这是好生意合理价，还是平庸生意便宜价？",
-                         "maps_to_skill":  "Path B 步骤2 总纲",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "letter:1989"
-                                         ],
-                         "source_refs_status":  "verified_web",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-                                                "It\u0027s far better to buy a wonderful company at a fair price than a fair company at a wonderful price. (1989 letter)"
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-                                                 "CE-dexter"
-                                             ],
-                         "how_to_measure":  "先定生意质量档（franchise/commodity/hybrid），再谈价格",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-institutional-imperative",
-                         "layer":  "management",
-                         "question":  "管理层是否受机构惯性驱使做非理性扩张/模仿/并购？",
-                         "maps_to_skill":  "Path B 步骤2 警告项",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "letter:1989 (verified_web 2026-10-17, 2 occurrences, first use: an unseen force that we might call the institutional imperative)",
-                                             "skill:references/04-management-governance.md"
-                                         ],
-                         "source_refs_status":  "verified_web",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "并购史 + 资本配置是否跟随同行而非回报驱动",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-mgmt-integrity",
-                         "layer":  "management",
-                         "question":  "管理层是否诚实面对问题而非掩盖？",
-                         "maps_to_skill":  "Quick Filter Q7（唯一一票否决）",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "skill:references/04-management-governance.md (quote: You can never make a good deal with a bad person, no matter how attractive the prospects.)"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "veto",
-                         "veto_rationale":  "一票否决的实质依据是 bad-person 原话（本地可验证）；年报措辞回避/坏消息延迟披露/审计意见保留即触发",
-                         "evidence_quote":  [
-                                                "You can never make a good deal with a bad person, no matter how attractive the prospects."
-                                            ],
-                         "evidence_action":  [
-                                                 "track-record:exit-* (to_build)"
-                                             ],
-                         "counter_example":  [
-                                                 "CE-salomon"
-                                             ],
-                         "how_to_measure":  "年报中坏消息的位置与措辞 vs 好消息；诉讼/监管披露完整性",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-earnings-quality",
-                         "layer":  "financials",
-                         "question":  "利润是否真转化为现金，而非会计技巧？",
-                         "maps_to_skill":  "Quick Filter Q5",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/05-financial-metrics.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "OCF/净利 趋势 + 非经常性损益占比（见 T-nonrecurring-ratio）+ 应收/预付异动",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-owner-earnings",
-                         "layer":  "financials",
-                         "question":  "Owner Earnings = 净利 + D\u0026A - 维持性 capex - 营运资本增加，是否为正且稳定？",
-                         "maps_to_skill":  "Path B 步骤3 公式",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "letter:1986 (verified_web 2026-10-17, 8 occurrences, brkshr mirror)",
-                                             "skill:references/05-financial-metrics.md"
-                                         ],
-                         "source_refs_status":  "verified_web",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "维持性 capex 年报通常不拆分 =\u003e 允许 not_disclosed，不得让模型猜",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-debt-survival",
-                         "layer":  "financials",
-                         "question":  "行业最坏情形（收入 -30%）下能否存活？",
-                         "maps_to_skill":  "Quick Filter Q6",
-                         "provenance":  "skill_author",
-                         "source_refs":  [
-
-                                         ],
-                         "source_refs_status":  "missing",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "压力测试：收入-30% 后的利息覆盖与现金跑道；阈值见 T-leverage-ebitda / T-interest-coverage（均 signal_only）",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-margin-of-safety",
-                         "layer":  "valuation",
-                         "question":  "价格与内在价值之间是否有显著差距？",
-                         "maps_to_skill":  "Path B 步骤3 / Quick Filter Q8",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "letter:1992"
-                                         ],
-                         "source_refs_status":  "verified_web",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-                                                "We insist on a margin of safety in our purchase price. If we calculate the value of a common stock to be only slightly higher than its price, we\u0027re not interested in buying. We believe this margin-of-safety principle, so strongly emphasized by Ben Graham, to be the cornerstone of investment success. (1992 letter)"
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "方向是他本人坚持的；具体折价百分比（T-mos-tier）为 skill_author，仅 signal_only",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-price-vs-value",
-                         "layer":  "valuation",
-                         "question":  "当前价格与内在价值的差距是否足够大？",
-                         "maps_to_skill":  "Quick Filter Q8",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "letter:1992"
-                                         ],
-                         "source_refs_status":  "verified_web",
-                         "decision_weight":  "core",
-                         "affected_by_philosophy":  [
-                                                        "P-inner-scorecard"
-                                                    ],
-                         "philosophy_rule":  "指标越一致地看空，越要回到生意本身重判，而不是加重否决",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "内在价值区间 + 对应确定性档；无法可靠估计 =\u003e 不投资",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-risk-three-class",
-                         "layer":  "risk",
-                         "question":  "结构性 / 财务性 / 行为性三类风险是否都查过？",
-                         "maps_to_skill":  "Path B 步骤4",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/07-risk-behavior.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "三类各至少一条具体风险或显式写无",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-sell-1-overvalued",
-                         "layer":  "sell",
-                         "question":  "价格是否严重高估？",
-                         "maps_to_skill":  "卖出标准 1",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/07-risk-behavior.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "估值区间上沿 vs 现价",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-sell-2-moat-destroyed",
-                         "layer":  "sell",
-                         "question":  "基本面护城河是否已毁坏？",
-                         "maps_to_skill":  "卖出标准 2",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/07-risk-behavior.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-                                                 "CE-textile"
-                                             ],
-                         "how_to_measure":  "C-moat-trend 判 narrowing 且不可逆",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-sell-3-integrity",
-                         "layer":  "sell",
-                         "question":  "管理层是否出现诚信问题？（是 =\u003e 立即卖）",
-                         "maps_to_skill":  "卖出标准 3",
-                         "provenance":  "buffett_verbatim",
-                         "source_refs":  [
-                                             "skill:references/04-management-governance.md (bad person quote)",
-                                             "skill:references/07-risk-behavior.md (four sell criteria)"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "veto",
-                         "veto_rationale":  "与 C-mgmt-integrity 同源：bad-person 原话；持仓期间触发即立即卖出，不等估值",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-                                                 "CE-salomon"
-                                             ],
-                         "how_to_measure":  "欺诈/侵占/重大隐瞒证据",
-                         "fallback":  "uncertain"
-                     },
-                     {
-                         "id":  "C-sell-4-better-opportunity",
-                         "layer":  "sell",
-                         "question":  "是否存在显著更好的机会？",
-                         "maps_to_skill":  "卖出标准 4",
-                         "provenance":  "buffett_implied",
-                         "source_refs":  [
-                                             "skill:references/07-risk-behavior.md"
-                                         ],
-                         "source_refs_status":  "verified_local",
-                         "decision_weight":  "core",
-                         "evidence_quote":  [
-
-                                            ],
-                         "evidence_action":  [
-
-                                             ],
-                         "counter_example":  [
-
-                                             ],
-                         "how_to_measure":  "机会成本比较；无候选则判 No",
-                         "fallback":  "uncertain"
-                     }
-                 ]
+ "schema_version": "1.1",
+ "generated": "2026-10-17",
+ "hard_rules": [
+  "decision_weight == veto  =>  provenance must be buffett_verbatim",
+  "provenance == buffett_verbatim  =>  source_refs must be non-empty",
+  "decision_weight == gate  =>  provenance in (buffett_verbatim, buffett_implied) and gate_rule and fallback required"
+ ],
+ "enums": {
+  "provenance": [
+   "buffett_verbatim",
+   "buffett_implied",
+   "skill_author",
+   "industry_convention",
+   "practice_derived"
+  ],
+  "decision_weight": [
+   "gate",
+   "veto",
+   "core",
+   "signal_only",
+   "context"
+  ],
+  "source_refs_status": [
+   "verified_web",
+   "verified_local",
+   "to_verify",
+   "missing"
+  ]
+ },
+ "criteria": [
+  {
+   "id": "C-circle-competence",
+   "layer": "mental_positioning",
+   "question": "能否用一段话解释这门生意如何赚钱？",
+   "maps_to_skill": "Quick Filter Q1 / Path B 步骤1",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/01-thinking-frameworks.md",
+    "letter:1996 / 1999 / 2001 / 2013 ('circle of competence' 4处逐字命中)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "gate",
+   "gate_rule": "不通过则直接输出 not_scorable；其余判据不得继续打分",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [
+    "CE-airlines"
+   ],
+   "how_to_measure": "分析者独立写一段生意解释；需依赖外部材料才能写完即视为不通过",
+   "fallback": "not_scorable",
+   "maturity": "validated"
+  },
+  {
+   "id": "C-inversion",
+   "layer": "mental_positioning",
+   "question": "这笔投资最可能以哪三种方式让我亏钱？",
+   "maps_to_skill": "Path B 步骤1 逆向检查",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/01-thinking-frameworks.md",
+    "letter:1981 / 1985 / 1996 ('invert these situations' 巴式逆向原话，待逐字补订)",
+    "letter:1987 / 1993 ('Mr. Market' 13处命中，情绪反转框架)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "context",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "列出 top3 亏损路径；列不出即视为未理解生意",
+   "fallback": "not_scorable",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-time-horizon",
+   "layer": "mental_positioning",
+   "question": "是否以持有 10 年的视角在评估，而非本季度涨跌？",
+   "maps_to_skill": "Path B 步骤1 时间 horizon",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/01-thinking-frameworks.md",
+    "letter:1996 ('favorite holding period is forever')"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "context",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "结论中必须显式写出 10 年视角下的生意终局判断",
+   "fallback": "uncertain",
+   "maturity": "seed"
+  },
+  {
+   "id": "C-durability",
+   "layer": "business_quality",
+   "question": "10 年后这家公司是否仍存在且更有竞争力？",
+   "maps_to_skill": "Quick Filter Q2",
+   "provenance": "skill_author",
+   "source_refs": [
+    "letter:1999 / 2007 / 2008 / 2014 / 2017 / 2018 / 2020 / 2021 ('durable' 15处命中)"
+   ],
+   "source_refs_status": "missing",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [
+    "CE-textile"
+   ],
+   "how_to_measure": "技术/模式颠覆风险清单 + 行业生命周期判断",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-moat-replicability",
+   "layer": "business_quality",
+   "question": "竞争者认真投入能否复制其核心优势？",
+   "maps_to_skill": "Quick Filter Q3",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/03-business-moat.md",
+    "letter:1986 / 1993 / 1995 / 1996 / 2005 / 2007 等 ('moat' 28处；'economic castle' 1993/1995/1996)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [
+    "track-record:holding-Sees (to_build)"
+   ],
+   "counter_example": [],
+   "how_to_measure": "五类护城河（无形/成本/转换/网络/效率规模）逐一排除",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-moat-trend",
+   "layer": "business_quality",
+   "question": "护城河在变宽、稳定还是变窄？",
+   "maps_to_skill": "Path B 步骤2 关键判断",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/03-business-moat.md",
+    "letter:2007 ('moat' 单年 8处，护城河宽度与城堡比喻)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [
+    "CE-textile"
+   ],
+   "how_to_measure": "至少 5 年毛利率/市占率/提价记录趋势",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-pricing-power",
+   "layer": "business_quality",
+   "question": "提价 5-10% 是否会显著流失客户？",
+   "maps_to_skill": "Quick Filter Q4",
+   "provenance": "skill_author",
+   "source_refs": [
+    "letter:1991 (pricing power 是决定企业成败的首要因素，需按 1991 信原文人工补订)"
+   ],
+   "source_refs_status": "to_verify",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [
+    "track-record:holding-KO (to_build)",
+    "track-record:holding-Sees (to_build)"
+   ],
+   "counter_example": [],
+   "how_to_measure": "历史提价记录 + 销量弹性；commodity 型直接判 No",
+   "fallback": "uncertain",
+   "known_conflict": "原 quote 字段误把 1989 年 'wonderful company' 句挂在本条下；该句已归属 C-wonderful-at-fair。pricing power 主题词 1991 年起出现于信件。",
+   "maturity": "seed"
+  },
+  {
+   "id": "C-wonderful-at-fair",
+   "layer": "business_quality",
+   "question": "这是好生意合理价，还是平庸生意便宜价？",
+   "maps_to_skill": "Path B 步骤2 总纲",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "letter:1989",
+    "letter:1989 (EXACT 1.0 2026-10-20)"
+   ],
+   "source_refs_status": "verified_web",
+   "decision_weight": "core",
+   "evidence_quote": [
+    "It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price. (1989 letter)"
+   ],
+   "evidence_action": [],
+   "counter_example": [
+    "CE-dexter"
+   ],
+   "how_to_measure": "先定生意质量档（franchise/commodity/hybrid），再谈价格",
+   "fallback": "uncertain",
+   "maturity": "validated"
+  },
+  {
+   "id": "C-institutional-imperative",
+   "layer": "management",
+   "question": "管理层是否受机构惯性驱使做非理性扩张/模仿/并购？",
+   "maps_to_skill": "Path B 步骤2 警告项",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "letter:1989 (verified_web 2026-10-17, 2 occurrences, first use: an unseen force that we might call the institutional imperative)",
+    "skill:references/04-management-governance.md",
+    "letter:1990 (institutional imperative 逐字命中)"
+   ],
+   "source_refs_status": "verified_web",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "并购史 + 资本配置是否跟随同行而非回报驱动",
+   "fallback": "uncertain",
+   "maturity": "validated"
+  },
+  {
+   "id": "C-mgmt-integrity",
+   "layer": "management",
+   "question": "管理层是否诚实面对问题而非掩盖？",
+   "maps_to_skill": "Quick Filter Q7（唯一一票否决）",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "skill:references/04-management-governance.md (quote: You can never make a good deal with a bad person, no matter how attractive the prospects.)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "veto",
+   "veto_rationale": "一票否决的实质依据是 bad-person 原话（本地可验证）；年报措辞回避/坏消息延迟披露/审计意见保留即触发",
+   "evidence_quote": [
+    "With a few notable exceptions, I have admired the managers we've had. But our record with managers we admired less than we should have been is poor. ... We've never succeeded in making a good deal with a bad person. (letter:1989, EXACT 回源核验 2026-10-20)"
+   ],
+   "evidence_action": [
+    "track-record:exit-* (to_build)"
+   ],
+   "counter_example": [
+    "CE-salomon"
+   ],
+   "how_to_measure": "年报中坏消息的位置与措辞 vs 好消息；诉讼/监管披露完整性",
+   "fallback": "uncertain",
+   "known_conflict": "skill references/04 曾把本条转写为祈使句 'You can never make a good deal with a bad person'，该句式在 48 封股东信中不存在；1989 年信原文为第一人称经验陈述（we've never succeeded）。2026-10-20 引语核验纠错。",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-earnings-quality",
+   "layer": "financials",
+   "question": "利润是否真转化为现金，而非会计技巧？",
+   "maps_to_skill": "Quick Filter Q5",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/05-financial-metrics.md",
+    "letter:1989 / 1990 / 1996 ('look-through earnings' 59处)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "OCF/净利 趋势 + 非经常性损益占比（见 T-nonrecurring-ratio）+ 应收/预付异动",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-owner-earnings",
+   "layer": "financials",
+   "question": "Owner Earnings = 净利 + D&A - 维持性 capex - 营运资本增加，是否为正且稳定？",
+   "maps_to_skill": "Path B 步骤3 公式",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "letter:1986 (verified_web 2026-10-17, 8 occurrences, brkshr mirror)",
+    "skill:references/05-financial-metrics.md",
+    "letter:1986 ('owner earnings' 定义段，9处命中)"
+   ],
+   "source_refs_status": "verified_web",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "维持性 capex 年报通常不拆分 => 允许 not_disclosed，不得让模型猜",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-debt-survival",
+   "layer": "financials",
+   "question": "行业最坏情形（收入 -30%）下能否存活？",
+   "maps_to_skill": "Quick Filter Q6",
+   "provenance": "skill_author",
+   "source_refs": [],
+   "source_refs_status": "missing",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "压力测试：收入-30% 后的利息覆盖与现金跑道；阈值见 T-leverage-ebitda / T-interest-coverage（均 signal_only）",
+   "fallback": "uncertain",
+   "maturity": "seed"
+  },
+  {
+   "id": "C-margin-of-safety",
+   "layer": "valuation",
+   "question": "价格与内在价值之间是否有显著差距？",
+   "maps_to_skill": "Path B 步骤3 / Quick Filter Q8",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "letter:1992"
+   ],
+   "source_refs_status": "verified_web",
+   "decision_weight": "core",
+   "evidence_quote": [
+    "We insist on a margin of safety in our purchase price. If we calculate the value of a common stock to be only slightly higher than its price, we're not interested in buying. We believe this margin-of-safety principle, so strongly emphasized by Ben Graham, to be the cornerstone of investment success. (1992 letter)"
+   ],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "方向是他本人坚持的；具体折价百分比（T-mos-tier）为 skill_author，仅 signal_only",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-price-vs-value",
+   "layer": "valuation",
+   "question": "当前价格与内在价值的差距是否足够大？",
+   "maps_to_skill": "Quick Filter Q8",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "letter:1992",
+    "letter:1992 ('price is what you pay, value is what you get' 章节，需按原文补订引用位置)"
+   ],
+   "source_refs_status": "verified_web",
+   "decision_weight": "core",
+   "affected_by_philosophy": [
+    "P-inner-scorecard"
+   ],
+   "philosophy_rule": "指标越一致地看空，越要回到生意本身重判，而不是加重否决",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "内在价值区间 + 对应确定性档；无法可靠估计 => 不投资",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-risk-three-class",
+   "layer": "risk",
+   "question": "结构性 / 财务性 / 行为性三类风险是否都查过？",
+   "maps_to_skill": "Path B 步骤4",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/07-risk-behavior.md",
+    "letter:1993 ('business risk' 等风险分类语境)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "三类各至少一条具体风险或显式写无",
+   "fallback": "uncertain",
+   "maturity": "seed"
+  },
+  {
+   "id": "C-sell-1-overvalued",
+   "layer": "sell",
+   "question": "价格是否严重高估？",
+   "maps_to_skill": "卖出标准 1",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/07-risk-behavior.md"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "估值区间上沿 vs 现价",
+   "fallback": "uncertain",
+   "maturity": "seed"
+  },
+  {
+   "id": "C-sell-2-moat-destroyed",
+   "layer": "sell",
+   "question": "基本面护城河是否已毁坏？",
+   "maps_to_skill": "卖出标准 2",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/07-risk-behavior.md"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [
+    "CE-textile"
+   ],
+   "how_to_measure": "C-moat-trend 判 narrowing 且不可逆",
+   "fallback": "uncertain",
+   "maturity": "seed"
+  },
+  {
+   "id": "C-sell-3-integrity",
+   "layer": "sell",
+   "question": "管理层是否出现诚信问题？（是 => 立即卖）",
+   "maps_to_skill": "卖出标准 3",
+   "provenance": "buffett_verbatim",
+   "source_refs": [
+    "skill:references/04-management-governance.md (bad person quote)",
+    "skill:references/07-risk-behavior.md (four sell criteria)"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "veto",
+   "veto_rationale": "与 C-mgmt-integrity 同源：bad-person 原话；持仓期间触发即立即卖出，不等估值",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [
+    "CE-salomon"
+   ],
+   "how_to_measure": "欺诈/侵占/重大隐瞒证据",
+   "fallback": "uncertain",
+   "maturity": "corroborated"
+  },
+  {
+   "id": "C-sell-4-better-opportunity",
+   "layer": "sell",
+   "question": "是否存在显著更好的机会？",
+   "maps_to_skill": "卖出标准 4",
+   "provenance": "buffett_implied",
+   "source_refs": [
+    "skill:references/07-risk-behavior.md"
+   ],
+   "source_refs_status": "verified_local",
+   "decision_weight": "core",
+   "evidence_quote": [],
+   "evidence_action": [],
+   "counter_example": [],
+   "how_to_measure": "机会成本比较；无候选则判 No",
+   "fallback": "uncertain",
+   "maturity": "seed"
+  }
+ ],
+ "updated": "2026-10-20 23:40:43",
+ "revision_log": [
+  {
+   "date": "2026-10-20",
+   "change": "引语回源核验首轮：修 C-mgmt-integrity 句式（祈使句误传→1989原文）、摘除 C-pricing-power 错误挂句；为 14 条判据回写信件年份锚点；20 条全部标 maturity（seed/corroborated/validated）。",
+   "reason": "person-forge verify_quotes + term_scan 实测（48 封明文信件，含 10 封 brotli 修复、6 封真身重抓）。"
+  }
+ ]
 }

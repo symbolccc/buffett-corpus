@@ -1,0 +1,86 @@
+{
+ "schema_version": "1.0",
+ "updated": "2026-10-20",
+ "note": "反例库：他判错并亲口承认的案例（认错原话已回源 48 封信核验）+ 赢了但不可复制的特例。用途：对抗评审时对照——同样信号在历史上失败过几次。引用均 ≤50 词。",
+ "verified_against": "person-forge/_workspace/letters_text.json（48 封信明文缓存，2026-10-20）",
+ "counter_examples": [
+  {
+   "id": "CE-dexter",
+   "case": "Dexter Shoe（1993 收购）",
+   "nature": "用伯克希尔股票支付对价 + 误判护城河持久性",
+   "what_went_wrong": "标的价值归零；用股票支付使损失从 4 亿放大到 35 亿",
+   "confession": {"letter": 2007, "quote": "Finally, I made an even worse mistake when I said yes to Dexter ... By using Berkshire stock, I compounded this error hugely. That move made the cost to Berkshire shareholders not $400 million, but rather $3.5 billion.", "verified": true},
+   "lesson": "股票对价就是永久让渡股权，不是'纸'；护城河评估必须给出证伪期限",
+   "links": ["C-moat-replicability", "C-inversion"],
+   "status": "verified"
+  },
+  {
+   "id": "CE-textile",
+   "case": "纺织本业（1965-1985 持续投入）",
+   "nature": "明知商品化行业仍持续投入资本",
+   "what_went_wrong": "长期资本回报低下，1985 年彻底退出",
+   "confession": {"letter": 1977, "quote": "We have mistakenly predicted ... A few shareholders have questioned the wisdom of remaining in the textile business", "verified": true},
+   "supplement": {"letter": 1978, "quote": "The textile industry illustrates in textbook style how producers of relatively undifferentiated ... ", "note": "商品化行业的经济学不因管理层努力而改变", "verified": true},
+   "lesson": "行业经济学压倒管理层质量；'再努力一年'是商品化行业的标准错觉",
+   "links": ["C-durability", "C-return-on-capital"],
+   "status": "verified"
+  },
+  {
+   "id": "CE-usair",
+   "case": "USAir 优先股（1989 买入）",
+   "nature": "航空业经济学误判",
+   "what_went_wrong": "买入次年行业经济恶化；后来分红中断，试图半价卖出未果",
+   "confession": {"letter": 1997, "quote": "Those who have watched my moves in this investment know that I have compiled a record that is unblemished by success. I was wrong in originally purchasing the stock, and I was wrong later.", "verified": true},
+   "supplement": {"letter": 1990, "quote": "Since our purchase, the economics of the airline industry have deteriorated at an alarming pace, accelerated by the kamikaze pricing", "verified": true},
+   "lesson": "行业经济学恶化的速度可以快于任何条款保护；优先股条款不是安全边际的替代品",
+   "links": ["C-earnings-quality", "C-industry-economics"],
+   "status": "verified"
+  },
+  {
+   "id": "CE-salomon",
+   "case": "Salomon Brothers（1987 起持股，1991 国债丑闻）",
+   "nature": "被投公司合规与风控失灵，巴菲特出任临时主席收拾局面",
+   "what_went_wrong": "企业文化缺陷导致公司濒临破产边缘，巴菲特本人中断正常工作 10 个月",
+   "confession": {"letter": 1992, "quote": "Last June, I stepped down as Interim Chairman of Salomon Inc after ten months in the job.", "verified": true},
+   "lesson": "管理层诚信判据（C-mgmt-integrity）不只看历史记录，更看企业内控文化； '跟喜欢的人合作'不能豁免内控检查",
+   "links": ["C-mgmt-integrity"],
+   "status": "verified"
+  },
+  {
+   "id": "CE-conoco",
+   "case": "ConocoPhillips（2008 顶价建仓）",
+   "nature": "周期顶部大额买入能源股",
+   "what_went_wrong": "油价与气价顶部买入，随后价格暴跌",
+   "confession": {"letter": 2008, "quote": "Without urging from Charlie or anyone else, I bought a large amount of ConocoPhillips stock when oil and gas prices were near their peak. I in no way anticipated the [collapse]", "verified": true},
+   "lesson": "无外部制衡的独立决策照样会错；周期股在'看起来便宜'的顶点最危险（低 PE 陷阱）",
+   "links": ["C-moat-trend", "C-pricing-power"],
+   "status": "verified"
+  },
+  {
+   "id": "CE-airlines",
+   "case": "四大航空股（2016-2020 建仓清仓）",
+   "nature": "先买入四家航空巨头，2020 疫情中全部清仓",
+   "what_went_wrong": "与他本人 2007 年'航空业毁于一旦'论断直接冲突",
+   "confession": {"letter": null, "quote": null, "verified": false, "note": "48 封信（1977-2024）内无认错原话；认错表述见于 2020 年采访与定期报告，语料边界外"},
+   "evidence_within_corpus": [
+    {"letter": 2007, "quote": "if there had been a farsighted capitalist present at Kitty Hawk, he would have done his successors a huge favor by shooting Orville down", "verified": true, "note": "2007 年信航空业经济学论断，与 2016 年建仓构成矛盾"}
+   ],
+   "outside_pointer": "待核验来源：2020 Q2 10-Q 持仓变动 + 2020-06 媒体采访原话（不编 URL，找到后补 accession）",
+   "lesson": "即便是本人最著名的行业论断，也会被自己推翻；'伟大投资者的判断'不是免检标签",
+   "links": ["C-inversion", "C-durability"],
+   "status": "to_verify"
+  },
+  {
+   "id": "CE-gs-ge-win",
+   "case": "2008 高盛/GE/箭牌 优先股+认股权证",
+   "nature": "赢了——但普通人拿不到的特例",
+   "what_went_wrong": null,
+   "evidence": {"letter": 2008, "quote": "purchases totaling $14.5 billion in fixed-income securities issued by Wrigley, Goldman Sachs and General Electric. We very much like these commitments, which carry high current yields ... we also acquired a substantial [amount of warrants]", "verified": true},
+   "why_unique": "高票息+免费认股权证+危机中唯一的现金提供方地位，来自浮存金、信用等级与永久资本",
+   "lesson_for_agent": "禁止把伯克希尔的特殊谈判地位当成普通投资者可用策略输出；分析结论必须区分'他的特权'与'可迁移方法'",
+   "links": [],
+   "status": "verified"
+  }
+ ],
+ "stats": {"total": 7, "verified": 6, "to_verify": 1}
+}

@@ -1,0 +1,161 @@
+{
+ "case": "Tesla, Inc.",
+ "verdict_overall": "需人工核验",
+ "generated": "2026-10-21 00:30",
+ "mandatory": [
+  {
+   "criterion": "C-earnings-quality",
+   "challenge": "OCF/NI 偏高是否来自营运资本一次性释放或折旧政策异常？调出前两个完整周期年份对比数据。",
+   "status": "pass",
+   "cross_refs": [
+    "CE-usair（USAir 优先股（1989 买入），status=verified）"
+   ]
+  },
+  {
+   "criterion": "C-debt-survival",
+   "challenge": "净现金里有没有受限资金/质押？最低运营现金需求是多少？极端月现金流下能撑几个月？",
+   "status": "pass",
+   "cross_refs": []
+  },
+  {
+   "criterion": "confirmation-bias-1",
+   "challenge": "强制换边：如果被迫写做空报告，你最强的三个论点是什么？（写出来，不许空）"
+  },
+  {
+   "criterion": "confirmation-bias-2",
+   "challenge": "扰动测试：把关键输入（利润率/增长率/折现率）各调 ±20%，结论翻转吗？翻转点在哪里？"
+  },
+  {
+   "criterion": "confirmation-bias-3",
+   "challenge": "历史对照：本案例与反例库（counter-examples.json）里哪个已验证失败案例最像？逐条对比信号。"
+  }
+ ],
+ "advisory": [
+  {
+   "criterion": "C-circle-competence",
+   "challenge": "写一段'这不是能力圈'的最强论证：用最外行的话解释这门生意，检查哪一句说不下去。",
+   "status": "not_scorable",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-owner-earnings",
+   "challenge": "维持性 capex 是否估低了？行业再投资强度上四分位是多少？用同行的重置成本核一遍。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-inversion",
+   "challenge": "列出 kill 条件：每条给出证伪指标、监测频率、触发后动作。没有 kill 条件 = 没想清楚。",
+   "status": "uncertain",
+   "cross_refs": [
+    "CE-dexter（Dexter Shoe（1993 收购），status=verified）",
+    "CE-airlines（四大航空股（2016-2020 建仓清仓），status=to_verify）"
+   ]
+  },
+  {
+   "criterion": "C-time-horizon",
+   "challenge": "写 10 年终局：这家公司 10 年后最可能的样子和最不可能的样子。写不出 10 年 = 降低仓位等级。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-durability",
+   "challenge": "找出最可能让需求消失的一个技术或行为变化，给发生概率区间（不是'不可能'）。",
+   "status": "uncertain",
+   "cross_refs": [
+    "CE-textile（纺织本业（1965-1985 持续投入），status=verified）",
+    "CE-airlines（四大航空股（2016-2020 建仓清仓），status=to_verify）"
+   ]
+  },
+  {
+   "criterion": "C-moat-replicability",
+   "challenge": "复制者需要多少钱、多少年、什么准入条件？找一个最接近的成功复制案例。",
+   "status": "uncertain",
+   "cross_refs": [
+    "CE-dexter（Dexter Shoe（1993 收购），status=verified）"
+   ]
+  },
+  {
+   "criterion": "C-moat-trend",
+   "challenge": "价格周期还是结构性改善？调出上一个完整周期的毛利率/市占率对比，两条线必须分开画。",
+   "status": "uncertain",
+   "cross_refs": [
+    "CE-conoco（ConocoPhillips（2008 顶价建仓），status=verified）"
+   ]
+  },
+  {
+   "criterion": "C-pricing-power",
+   "challenge": "上次提价是什么时候？流失了多少客户/份额？涨价幅度与通胀累积幅度比是多少？",
+   "status": "uncertain",
+   "cross_refs": [
+    "CE-conoco（ConocoPhillips（2008 顶价建仓），status=verified）"
+   ]
+  },
+  {
+   "criterion": "C-wonderful-at-fair",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-institutional-imperative",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-mgmt-integrity",
+   "challenge": "四项必查：关联交易、股东减持、股权质押、审计意见。逐项给证据原文。",
+   "status": "uncertain",
+   "cross_refs": [
+    "CE-salomon（Salomon Brothers（1987 起持股，1991 国债丑闻），status=verified）"
+   ]
+  },
+  {
+   "criterion": "C-risk-three-class",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-margin-of-safety",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-price-vs-value",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-sell-1-overvalued",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-sell-2-moat-destroyed",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-sell-3-integrity",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  },
+  {
+   "criterion": "C-sell-4-better-opportunity",
+   "challenge": "给出两个最可能推翻本判据结论的反面数据点；给不出来就是搜索不足，不是结论可靠。",
+   "status": "uncertain",
+   "cross_refs": []
+  }
+ ],
+ "counts": {
+  "mandatory": 5,
+  "advisory": 18
+ }
+}

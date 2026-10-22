@@ -1,0 +1,264 @@
+{
+  "case": "Tesla, Inc.",
+  "period": "latest reported quarter (live fetch 2026-10-21)",
+  "schema_version": "1.0",
+  "overall": "需人工核验",
+  "field_handling": {
+    "usable": 13,
+    "not_disclosed": [
+      "net_income_deducted",
+      "non_recurring_detail",
+      "interest_expense",
+      "capex_maintenance",
+      "roic",
+      "customer_concentration_top1",
+      "audit_opinion",
+      "litigation_disclosure",
+      "share_pledge_or_freeze"
+    ],
+    "low_confidence": [
+      {
+        "field": "da",
+        "confidence": 0.85
+      },
+      {
+        "field": "working_capital_delta",
+        "confidence": 0.82
+      }
+    ],
+    "rule": "conf<0.9 or not_disclosed never counts as evidence"
+  },
+  "threshold_firing": [
+    {
+      "threshold": "T-cash-conversion",
+      "metric": "现金转换率 OCF/净利",
+      "bound": 0.9,
+      "direction": ">=",
+      "observed": 4.2088,
+      "decision_weight": "signal_only",
+      "action": "cash conversion check"
+    },
+    {
+      "threshold": "T-nonrecurring-ratio",
+      "metric": "非经常性损益 / 净利润",
+      "bound": 0.3,
+      "direction": "<=",
+      "observed": 0.0,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-leverage-ebitda",
+      "metric": "有息负债 / EBITDA",
+      "bound": 2.0,
+      "direction": "<=",
+      "observed": 1.4951,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-receivables-net-assets",
+      "metric": "(应收+预付) / 归母净资产",
+      "bound": 3.0,
+      "direction": "<=",
+      "observed": 0.0467,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-customer-concentration",
+      "metric": "第一大客户收入占比",
+      "bound": 0.5,
+      "direction": "<=",
+      "observed": -1,
+      "decision_weight": "signal_only",
+      "action": "not_disclosed -> uncertain (rule: no guessing)"
+    }
+  ],
+  "criteria": {
+    "C-circle-competence": {
+      "status": "pass",
+      "evidence": "生意可一段话解释：卖电动车（主力收入）+ 储能装机 + FSD/软件订阅 + 监管积分；收入结构公开可查。属能力圈边界内（可解释，但行业变化快）。",
+      "tags": [],
+      "auto_status": "not_scorable",
+      "annotated": true
+    },
+    "C-earnings-quality": {
+      "status": "pass",
+      "evidence": "OCF/NI=4.209 nonrec_ratio=0.0",
+      "tags": [],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-owner-earnings": {
+      "status": "uncertain",
+      "evidence": "inputs not_disclosed/low-conf",
+      "tags": [
+        "conservative_total_capex(capex_maintenance not_disclosed)",
+        "low_conf_working_capital(conf=0.82)",
+        "missing_inputs"
+      ],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-debt-survival": {
+      "status": "pass",
+      "evidence": "debt/ebitda=1.495 net_cash=27444000000.0",
+      "tags": [
+        "interest_coverage_skipped(not_disclosed)"
+      ],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-inversion": {
+      "status": "uncertain",
+      "evidence": "needs analyst top-3 loss paths",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-time-horizon": {
+      "status": "uncertain",
+      "evidence": "analyst: 10 年终局（车企还是 AI/机器人公司）管理层内部亦未定形，不替人回答。",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-durability": {
+      "status": "uncertain",
+      "evidence": "analyst: 电动车价格战持续、自动驾驶路线未收敛，10 年需求形态无法负责任地判断。",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-moat-replicability": {
+      "status": "uncertain",
+      "evidence": "needs 5-type moat elimination evidence",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-moat-trend": {
+      "status": "uncertain",
+      "evidence": "needs >=5y margin/share trend (cyclical confusion guard)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-pricing-power": {
+      "status": "uncertain",
+      "evidence": "needs raise-price history + elasticity",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-wonderful-at-fair": {
+      "status": "uncertain",
+      "evidence": "needs franchise/commodity classification",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-institutional-imperative": {
+      "status": "uncertain",
+      "evidence": "needs M&A history + capital allocation review",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-mgmt-integrity": {
+      "status": "pass",
+      "evidence": "analyst: 截至取数日无公开重大财务造假/欺诈认定（演示草稿结论，需以最新新闻与 SEC 处罚记录复核后方可采信）。",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-risk-three-class": {
+      "status": "uncertain",
+      "evidence": "needs three explicit risks",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-margin-of-safety": {
+      "status": "uncertain",
+      "evidence": "no valuation input -> uncertain (rule: no buy/sell without price)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-price-vs-value": {
+      "status": "uncertain",
+      "evidence": "no intrinsic value range -> uncertain",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-1-overvalued": {
+      "status": "uncertain",
+      "evidence": "no price vs value range",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-2-moat-destroyed": {
+      "status": "uncertain",
+      "evidence": "depends on C-moat-trend",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-3-integrity": {
+      "status": "uncertain",
+      "evidence": "no fraud evidence file",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-4-better-opportunity": {
+      "status": "uncertain",
+      "evidence": "no candidate list",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    }
+  },
+  "sub_checks": {
+    "C-receivables-risk": {
+      "status": "pass",
+      "evidence": "(AR+pre)/NA=0.047",
+      "tags": [
+        "prepayments_not_disclosed"
+      ]
+    },
+    "C-customer-risk": {
+      "status": "uncertain",
+      "evidence": "top1 concentration not_disclosed",
+      "tags": []
+    }
+  },
+  "review_needed_criteria": [
+    "C-owner-earnings",
+    "C-inversion",
+    "C-time-horizon",
+    "C-durability",
+    "C-moat-replicability",
+    "C-moat-trend",
+    "C-pricing-power",
+    "C-wonderful-at-fair",
+    "C-institutional-imperative",
+    "C-risk-three-class",
+    "C-margin-of-safety",
+    "C-price-vs-value",
+    "C-sell-1-overvalued",
+    "C-sell-2-moat-destroyed",
+    "C-sell-3-integrity",
+    "C-sell-4-better-opportunity"
+  ],
+  "notes_applied": [
+    "C-circle-competence",
+    "C-durability",
+    "C-mgmt-integrity",
+    "C-time-horizon"
+  ]
+}

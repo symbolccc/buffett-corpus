@@ -1,0 +1,168 @@
+{
+ "company": "Tesla, Inc.",
+ "market": "NMS",
+ "period": "latest reported quarter (live fetch 2026-10-21)",
+ "source": "Yahoo Finance via yfinance, fetched 2026-10-21（聚合源；一级证据以 SEC EDGAR 为准）",
+ "unit": "USD (Yahoo raw scale)",
+ "market_block": {
+  "price": 373.85,
+  "currency": "USD",
+  "exchange": "NMS",
+  "market_cap_raw": 1476538400768,
+  "pe_ttm_raw": 346.1574,
+  "forward_pe_raw": 172.40742,
+  "fetched_at": "2026-10-21",
+  "source": "Yahoo Finance via yfinance, fetched 2026-10-21"
+ },
+ "fields": [
+  {
+   "key": "revenue",
+   "value": 28236000000.0,
+   "confidence": 0.92,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 IS 2026-06-30"
+  },
+  {
+   "key": "net_income",
+   "value": 1116000000.0,
+   "confidence": 0.92,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 IS 2026-06-30"
+  },
+  {
+   "key": "ocf",
+   "value": 4697000000.0,
+   "confidence": 0.92,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 CF 2026-06-30"
+  },
+  {
+   "key": "capex_total",
+   "value": 5796000000.0,
+   "confidence": 0.92,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 CF 2026-06-30"
+  },
+  {
+   "key": "da",
+   "value": 1619000000.0,
+   "confidence": 0.85,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 CF 2026-06-30"
+  },
+  {
+   "key": "cash_and_equivalents",
+   "value": 43524000000.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 BS 2026-06-30"
+  },
+  {
+   "key": "receivables",
+   "value": 4087000000.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 BS 2026-06-30"
+  },
+  {
+   "key": "inventory",
+   "value": 13752000000.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 BS 2026-06-30"
+  },
+  {
+   "key": "total_assets",
+   "value": 148524000000.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 BS 2026-06-30"
+  },
+  {
+   "key": "net_assets_attributable",
+   "value": 87519000000.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 BS 2026-06-30"
+  },
+  {
+   "key": "working_capital_delta",
+   "value": -2277000000.0,
+   "confidence": 0.82,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 BS 两期差值(近似)"
+  },
+  {
+   "key": "ebitda",
+   "value": 10755000320.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 TTM info（债务口径必须配 TTM，禁止用单季EBITDA比总债务）"
+  },
+  {
+   "key": "interest_bearing_debt",
+   "value": 16080000000.0,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 info TTM"
+  },
+  {
+   "key": "gross_margin",
+   "value": 0.18852,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 info TTM"
+  },
+  {
+   "key": "roe_weighted",
+   "value": 0.046669997,
+   "confidence": 0.9,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 info TTM"
+  },
+  {
+   "key": "net_income_deducted",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 美股无扣非概念"
+  },
+  {
+   "key": "non_recurring_detail",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 需读 10-K/10-Q 原文"
+  },
+  {
+   "key": "interest_expense",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 聚合源未稳定提供"
+  },
+  {
+   "key": "capex_maintenance",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 维持性capex任何聚合源都不披露"
+  },
+  {
+   "key": "roic",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 需自行计算"
+  },
+  {
+   "key": "customer_concentration_top1",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 需读年报"
+  },
+  {
+   "key": "audit_opinion",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 需读 10-K 审计意见页"
+  },
+  {
+   "key": "litigation_disclosure",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 需读 10-K/新闻"
+  },
+  {
+   "key": "share_pledge_or_freeze",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "Yahoo Finance via yfinance, fetched 2026-10-21 | 需读 13D/13F/新闻"
+  }
+ ],
+ "live_fetch": {
+  "tool": "fetch_quote.py yfinance",
+  "symbol": "TSLA",
+  "fetched_at": "2026-10-21"
+ }
+}
