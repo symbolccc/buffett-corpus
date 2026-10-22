@@ -97,9 +97,15 @@ def main():
     add("ocf", ocf, 0.93, " 现金流量表 " + report_date)
     cap_col = pick_col(cf, "CONSTRUCT_LONG_ASSET", "BUILD_FIXED")
     add("capex_total", abs(num(c0.get(cap_col))) if (c0 is not None and cap_col) else None, 0.9, " 购建长期资产现金")
-    da_col = pick_col(cf, "DEPR_FIXED", "DEPR_", "AMORTIZE")
-    da = num(c0.get(da_col)) if (c0 is not None and da_col) else None
-    add("da", da, 0.9, " 折旧摊销列: " + (da_col or "未找到"))
+    # 东财现金流量表折旧摊销为多列拆分；_YOY 列是百分比不是金额（曾误取致 da=8.39），
+    # OILGAS_BIOLOGY_DEPR 与 FA_IR_DEPR 同值（数据源重复列）不计，只取四项金额列求和
+    da = None
+    if c0 is not None:
+        parts = [num(c0.get(x)) for x in
+                 ("FA_IR_DEPR", "IR_DEPR", "IA_AMORTIZE", "LPE_AMORTIZE")]
+        got = [p for p in parts if p]
+        da = sum(got) if got else None
+    add("da", da, 0.9, " 折旧摊销=FA_IR_DEPR+IR_DEPR+IA_AMORTIZE+LPE_AMORTIZE(排除YOY%列与重复列)")
     # 资产负债表
     BAL = {
         "cash": ("MONETARYFUNDS", "货币资金"),

@@ -25,6 +25,11 @@
 > "It's far better to buy a wonderful company at a fair price than a fair company
 > at a wonderful price." — letter:1989（48 封信逐字核验 EXACT 1.0）
 
+## 完整实例报告
+
+一份按 v3 输出标准写成的真实分析（含判决卡、五年趋势表、3×3 估值敏感性矩阵）：
+[samples/600519-moutai-report.md](samples/600519-moutai-report.md) —— 贵州茅台，结论不买（基准内在价值 968 元 vs 现价 1,309 元）。
+
 装上即用：把本仓库挂到任意支持 [Agent Skills](https://agentskills.io/) 的客户端
 （根目录 `SKILL.md` 已按标准写好）。
 
