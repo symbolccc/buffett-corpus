@@ -61,11 +61,15 @@
    "case": "四大航空股（2016-2020 建仓清仓）",
    "nature": "先买入四家航空巨头，2020 疫情中全部清仓",
    "what_went_wrong": "与他本人 2007 年'航空业毁于一旦'论断直接冲突",
-   "confession": {"letter": null, "quote": null, "verified": false, "note": "48 封信（1977-2024）内无认错原话；认错表述见于 2020 年采访与定期报告，语料边界外"},
+   "confession": {"letter": null, "quote": null, "verified": false, "note": "48 封信（1977-2024）内无认错原话；认错出自 2020-05-02 年度股东大会（语料边界外），原话见 outside_pointer"},
    "evidence_within_corpus": [
     {"letter": 2007, "quote": "if there had been a farsighted capitalist present at Kitty Hawk, he would have done his successors a huge favor by shooting Orville down", "verified": true, "note": "2007 年信航空业经济学论断，与 2016 年建仓构成矛盾"}
    ],
-   "outside_pointer": "待核验来源：2020 Q2 10-Q 持仓变动 + 2020-06 媒体采访原话（不编 URL，找到后补 accession）",
+   "outside_pointer": {
+    "filing": "Berkshire Hathaway 10-Q（2020 财年二季报），SEC accession 0001564590-20-038544，2020-08-10 提交，主文档 brka-10q_20200630.htm（四大航空股清仓动作入档）",
+    "confession_secondary": "2020-05-02 年度股东大会（史上首次线上）：\"The world has changed for the airlines ... It turned out I was wrong about that business\"（新华社 2020-05-03 英文报道直引；新京报/第一财经/澎湃同日报道中文互证：'事实证明，我对这项业务的看法是错误的，这不是四位优秀的 CEO 的错'）",
+    "verify_path": "听 2020 年度大会官方视频音频核验原话后，本条可从 to_verify 升级为外部 verbatim"
+   },
    "lesson": "即便是本人最著名的行业论断，也会被自己推翻；'伟大投资者的判断'不是免检标签",
    "links": ["C-inversion", "C-durability"],
    "status": "to_verify"

@@ -1,6 +1,14 @@
 [
-  { "criterion": "C-circle-competence", "status": "pass", "_review": "AI 起草，需本人复核",
-    "justification": "生意可一段话解释：设计 GPU/加速计算芯片与 CUDA 软件生态，靠数据中心算力需求赚钱；但技术代际更替快，属能力圈边界。" },
-  { "criterion": "C-mgmt-integrity", "status": "pass", "_review": "AI 起草，需本人复核",
-    "justification": "截至取数日无公开重大财务造假/欺诈认定（演示草稿结论，需以最新新闻与 SEC 处罚记录复核后方可采信）。" }
+ {
+  "criterion": "C-circle-competence",
+  "status": "pass",
+  "_review": "AI 起草；本人 2026-10-22 批示免复核",
+  "justification": "生意可一段话解释：设计 GPU/加速计算芯片与 CUDA 软件生态，靠数据中心算力需求赚钱；但技术代际更替快，属能力圈边界。"
+ },
+ {
+  "criterion": "C-mgmt-integrity",
+  "status": "pass",
+  "_review": "AI 起草；本人 2026-10-22 批示免复核",
+  "justification": "截至取数日无公开重大财务造假/欺诈认定（演示草稿结论，需以最新新闻与 SEC 处罚记录复核后方可采信）。"
+ }
 ]

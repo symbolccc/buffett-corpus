@@ -1,0 +1,259 @@
+{
+  "case": "贵州茅台",
+  "period": "报告期 2026-06-30（live fetch 2026-10-22）",
+  "schema_version": "1.0",
+  "overall": "需人工核验",
+  "field_handling": {
+    "usable": 12,
+    "not_disclosed": [
+      "inventory",
+      "non_recurring_detail",
+      "capex_maintenance",
+      "roic",
+      "customer_concentration_top1",
+      "audit_opinion",
+      "litigation_disclosure",
+      "share_pledge_or_freeze"
+    ],
+    "low_confidence": [
+      {
+        "field": "working_capital_delta",
+        "confidence": 0.85
+      },
+      {
+        "field": "roe_weighted",
+        "confidence": 0.82
+      },
+      {
+        "field": "ebitda",
+        "confidence": 0.82
+      },
+      {
+        "field": "interest_expense",
+        "confidence": 0.8
+      }
+    ],
+    "rule": "conf<0.9 or not_disclosed never counts as evidence"
+  },
+  "threshold_firing": [
+    {
+      "threshold": "T-cash-conversion",
+      "metric": "现金转换率 OCF/净利",
+      "bound": 0.9,
+      "direction": ">=",
+      "observed": 1.588,
+      "decision_weight": "signal_only",
+      "action": "cash conversion check"
+    },
+    {
+      "threshold": "T-nonrecurring-ratio",
+      "metric": "非经常性损益 / 净利润",
+      "bound": 0.3,
+      "direction": "<=",
+      "observed": 0.0,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-receivables-net-assets",
+      "metric": "(应收+预付) / 归母净资产",
+      "bound": 3.0,
+      "direction": "<=",
+      "observed": 0.0,
+      "decision_weight": "signal_only",
+      "action": "within bound"
+    },
+    {
+      "threshold": "T-customer-concentration",
+      "metric": "第一大客户收入占比",
+      "bound": 0.5,
+      "direction": "<=",
+      "observed": -1,
+      "decision_weight": "signal_only",
+      "action": "not_disclosed -> uncertain (rule: no guessing)"
+    }
+  ],
+  "criteria": {
+    "C-circle-competence": {
+      "status": "pass",
+      "evidence": "生意可一段话解释：卖高端白酒（茅台酒为主），靠品牌定价权和经销体系赚钱；预收款模式先款后货。属能力圈内。",
+      "tags": [],
+      "auto_status": "not_scorable",
+      "annotated": true
+    },
+    "C-earnings-quality": {
+      "status": "pass",
+      "evidence": "OCF/NI=1.588 nonrec_ratio=0.0",
+      "tags": [],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-owner-earnings": {
+      "status": "pass",
+      "evidence": "NI+D&A-capex(-WC)=54484598316.967",
+      "tags": [
+        "conservative_total_capex(capex_maintenance not_disclosed)",
+        "low_conf_working_capital(conf=0.85)"
+      ],
+      "auto_status": "pass",
+      "annotated": false
+    },
+    "C-debt-survival": {
+      "status": "uncertain",
+      "evidence": "debt/ebitda/cash not_disclosed or low-conf",
+      "tags": [
+        "missing_inputs"
+      ],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-inversion": {
+      "status": "uncertain",
+      "evidence": "needs analyst top-3 loss paths",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-time-horizon": {
+      "status": "uncertain",
+      "evidence": "needs 10y endgame statement",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-durability": {
+      "status": "uncertain",
+      "evidence": "needs disruption list + lifecycle evidence",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-moat-replicability": {
+      "status": "uncertain",
+      "evidence": "needs 5-type moat elimination evidence",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-moat-trend": {
+      "status": "uncertain",
+      "evidence": "needs >=5y margin/share trend (cyclical confusion guard)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-pricing-power": {
+      "status": "pass",
+      "evidence": "analyst: 飞天茅台出厂价与市场价长期存在显著价差，提价历史清晰（2018/2023 年两次上调出厂价），是教科书级定价权样本。",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-wonderful-at-fair": {
+      "status": "uncertain",
+      "evidence": "needs franchise/commodity classification",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-institutional-imperative": {
+      "status": "uncertain",
+      "evidence": "needs M&A history + capital allocation review",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-mgmt-integrity": {
+      "status": "pass",
+      "evidence": "analyst: 截至取数日无公开重大财务造假/欺诈认定（国企背景+高现金流，历史上无重大诚信事件；如需正式决策仍应核对最新公告）。",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": true
+    },
+    "C-risk-three-class": {
+      "status": "uncertain",
+      "evidence": "needs three explicit risks",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-margin-of-safety": {
+      "status": "uncertain",
+      "evidence": "no valuation input -> uncertain (rule: no buy/sell without price)",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-price-vs-value": {
+      "status": "uncertain",
+      "evidence": "no intrinsic value range -> uncertain",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-1-overvalued": {
+      "status": "uncertain",
+      "evidence": "no price vs value range",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-2-moat-destroyed": {
+      "status": "uncertain",
+      "evidence": "depends on C-moat-trend",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-3-integrity": {
+      "status": "uncertain",
+      "evidence": "no fraud evidence file",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    },
+    "C-sell-4-better-opportunity": {
+      "status": "uncertain",
+      "evidence": "no candidate list",
+      "tags": [],
+      "auto_status": "uncertain",
+      "annotated": false
+    }
+  },
+  "sub_checks": {
+    "C-receivables-risk": {
+      "status": "pass",
+      "evidence": "(AR+pre)/NA=0.0",
+      "tags": [
+        "prepayments_not_disclosed"
+      ]
+    },
+    "C-customer-risk": {
+      "status": "uncertain",
+      "evidence": "top1 concentration not_disclosed",
+      "tags": []
+    }
+  },
+  "review_needed_criteria": [
+    "C-debt-survival",
+    "C-inversion",
+    "C-time-horizon",
+    "C-durability",
+    "C-moat-replicability",
+    "C-moat-trend",
+    "C-wonderful-at-fair",
+    "C-institutional-imperative",
+    "C-risk-three-class",
+    "C-margin-of-safety",
+    "C-price-vs-value",
+    "C-sell-1-overvalued",
+    "C-sell-2-moat-destroyed",
+    "C-sell-3-integrity",
+    "C-sell-4-better-opportunity"
+  ],
+  "notes_applied": [
+    "C-circle-competence",
+    "C-mgmt-integrity",
+    "C-pricing-power"
+  ]
+}
