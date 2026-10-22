@@ -83,9 +83,9 @@
   },
   {
    "key": "interest_bearing_debt",
-   "value": NaN,
-   "confidence": 0.9,
-   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 短借+长借+应付债券+一年内到期"
+   "value": 260000000.0,
+   "confidence": 0.92,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 短借+长借+应付债券+一年内到期 新浪资产负债表四项合计(NaN已剔除)"
   },
   {
    "key": "working_capital_delta",

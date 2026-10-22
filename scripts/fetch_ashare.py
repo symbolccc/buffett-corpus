@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 def num(v):
     try:
         f = float(v)
-        return f
+        return None if f != f else f  # NaN 防污染：任何一个 NaN 都不能混进合计
     except (TypeError, ValueError):
         return None
 
