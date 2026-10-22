@@ -52,7 +52,9 @@ description: >
 
 1. **实时取数**（第 1 数据源，结构化）：
 
-       python scripts/fetch_quote.py --symbol TSLA --name "Tesla, Inc." --out trial/
+       python scripts/fetch_quote.py --symbol TSLA --name "Tesla, Inc." --out trial/       # 美股/港股
+       python scripts/fetch_ashare.py --code 600519 --name 贵州茅台 --out trial/            # A 股单期
+       python scripts/fetch_history.py --code 600519 --name 贵州茅台 --out trial/           # A 股 6 期序列+分红（出报告必跑）
 
    输出 26 字段 schema（拿不到的明写 not_disclosed，禁止猜），直接喂判据引擎。
    数据源为聚合源（Yahoo via yfinance），confidence 0.82-0.92。
@@ -107,8 +109,12 @@ years from now." ——四关即此句的四个成分：看得懂 / 盈利几乎
 3. 判定线双轨：①criteria/thresholds.json 库内实值；②业界共识阈值（ROE>20%×5年、
    FCF转换>80%、有息负债/权益<0.5、安全边际≥25%，出处为 moatifi/invest-like 等
    共识整理）。两轨都列，均注明"非巴菲特原话"。
-4. 第二关必须给**多年趋势表**（≥4 个年度：净利/ROE/毛利率/OCF转换/营收增速）；
-   不足 4 年只准陈述现状，禁止下"护城河变宽/变窄"结论（周期混淆守卫）。
+4. 第二关必须给**多年趋势表**（≥4 个年度），且必须由 scripts/fetch_history.py 实拉
+   （A股=东财三表 6 期序列+分红合并口径；美股=quarterly 报表+年报补充）——
+   **能查/能算的指标禁止标"未披露"留空**：ROIC 可由 利润总额−所得税 ÷ 权益+有息债
+   自算（保守口径注明）；毛利率由营收/营业成本自算；派息率由中期+末期分红合并计算；
+   资产负债表科目空行项按 0 处理并说明（如商誉）。只写"数据源无此字段"前，必须列出
+   已尝试的接口/来源清单。不足 4 年只准陈述现状，禁止下"护城河变宽/变窄"结论（周期混淆守卫）。
 5. 正文写人话；机器术语（uncertain/not_disclosed/confidence）一律收进附录。
 6. 每关格式：先摆数字表 → 一句结论 → ✅/⚠️/❌ 收口。
 
