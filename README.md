@@ -33,7 +33,7 @@
 | 层 | 位置 | 一句话 |
 | :-- | :-- | :-- |
 | 判据层 | `criteria/criteria.json` | 20 条判据，provenance/权重/成熟度三标注 |
-| 时代层 | `corpus-index/eras.json` | 分四期，Abel 期（2026-02+）禁用巴菲特判据解读 |
+| 时代层 | `corpus-index/eras.json` | 分三期，Abel 期（2026-02+）禁用巴菲特判据解读 |
 | 归属层 | `criteria/attribution.json` | 每个概念标发明人（安全边际=Graham 等） |
 | 反例层 | `criteria/counter-examples/` | 认错原话逐字核验，6 验 + 1 待 |
 | 画像层 | `persona/buffett.persona.json` | 身份/世界观/决策/语言/演变/边界六层 |

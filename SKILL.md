@@ -58,7 +58,9 @@ description: >
    数据源为聚合源（Yahoo via yfinance），confidence 0.82-0.92。
 
 2. **新闻/公告搜索**（第 2 数据源，非结构化）：
-   - 有 DeepSeek key：`python scripts/deepseek_search.py --query "特斯拉 最新财报 2026Q3"`（key 只放环境变量 DEEPSEEK_API_KEY）
+   - **默认（免费，无 key）**：`python scripts/free_search.py --ticker TSLA`
+     （Yahoo 财经 RSS + Google 新闻 RSS + DuckDuckGo 三源轮插，通达源会在首行声明）
+   - 可选付费升级：`python scripts/deepseek_search.py --query "..."`（key 只放环境变量 DEEPSEEK_API_KEY）
    - 有宿主搜索工具（WebSearch 等）：直接用
    - 都没有：明说"本次分析不含新闻面"，不要假装搜过
 
@@ -131,7 +133,7 @@ description: >
 
 ## 结构层索引
 
-- 时代分期：`corpus-index/eras.json`（E1 学徒期 → E4 Abel 交接期，E4 数据不得用巴菲特判据解读）
+- 时代分期：`corpus-index/eras.json`（三期：体系成型 → 成熟 → Abel 交接期，E3 数据不得用巴菲特判据解读）
 - 概念归属：`criteria/attribution.json`（安全边际/市场先生属 Graham，wonderful-at-fair 属芒格推动）
 - 反例库：`criteria/counter-examples/counter-examples.json`（6 已核验 + 1 待核验）
 - 六层画像：`persona/buffett.persona.json`（身份/世界观/决策/语言/演变/边界）

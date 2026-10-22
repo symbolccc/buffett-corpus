@@ -24,4 +24,4 @@
 
 - 反例库（criteria/counter-examples.json）：每条判据自动挂历史失败案例
 - 归属层（criteria/attribution.json）：引用思想时检查发明人，防止错误包装
-- 时代分期（corpus-index/eras.json）：E4 期（Abel）数据不得进入巴菲特判据解读
+- 时代分期（corpus-index/eras.json）：E3 期（Abel）数据不得进入巴菲特判据解读
