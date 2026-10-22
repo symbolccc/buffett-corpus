@@ -1,0 +1,10 @@
+[
+  { "criterion": "C-circle-competence", "status": "pass", "_review": "AI 起草；本人 2026-10-22 批示免复核",
+    "justification": "生意可一段话解释：卖五粮液等浓香型白酒，靠品牌+经销体系赚钱，先款后货。属能力圈内。" },
+  { "criterion": "C-mgmt-integrity", "status": "pass", "_review": "AI 起草；本人 2026-10-22 批示免复核",
+    "justification": "上市公司披露层面未见财务造假认定；集团层面历史高管违纪案公开可查（已处理），正式决策前应核对最新公告。" },
+  { "criterion": "C-pricing-power", "status": "uncertain", "_review": "AI 起草；本人 2026-10-22 批示免复核",
+    "justification": "行业调整期普五批价承压，提价能力弱于茅台：需要批价与出厂价对比数据才能下结论，不硬判。" },
+  { "criterion": "C-durability", "status": "uncertain", "_review": "AI 起草；本人 2026-10-22 批示免复核",
+    "justification": "白酒行业深度调整期，次高端需求规则变化，品牌穿越周期需观察 2-3 个旺季验证。" }
+]

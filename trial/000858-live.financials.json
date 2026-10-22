@@ -1,0 +1,168 @@
+{
+ "company": "五粮液",
+ "market": "A股 SZ000858",
+ "period": "报告期 2026-06-30（live fetch 2026-10-22）",
+ "source": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22（聚合源；正式决策以交易所公告原文为准）",
+ "unit": "CNY",
+ "market_block": {
+  "price": 72.0,
+  "as_of": "2026-10-21",
+  "currency": "CNY",
+  "market_cap_raw": 279475776360.0,
+  "pe_ttm_raw": 21.36117948,
+  "pb_raw": 2.35884263,
+  "fetched_at": "2026-10-22",
+  "source": "akshare/东财估值 stock_value_em"
+ },
+ "fields": [
+  {
+   "key": "revenue",
+   "value": 28416674541.77,
+   "confidence": 0.93,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 利润表 2026-06-30"
+  },
+  {
+   "key": "net_income",
+   "value": 8752942991.31,
+   "confidence": 0.93,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 利润表 2026-06-30"
+  },
+  {
+   "key": "net_income_deducted",
+   "value": 8483289707.34,
+   "confidence": 0.93,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 利润表 2026-06-30（A 股原生扣非口径）"
+  },
+  {
+   "key": "ocf",
+   "value": -2153568792.32,
+   "confidence": 0.93,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 现金流量表 2026-06-30"
+  },
+  {
+   "key": "capex_total",
+   "value": 430976585.07,
+   "confidence": 0.9,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 购建长期资产现金"
+  },
+  {
+   "key": "da",
+   "value": 16.5969966701,
+   "confidence": 0.9,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 折旧摊销列: FA_IR_DEPR_YOY"
+  },
+  {
+   "key": "cash_and_equivalents",
+   "value": 119088869922.03,
+   "confidence": 0.92,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 资产负债表(EM) 2026-06-30"
+  },
+  {
+   "key": "receivables",
+   "value": 67086144.92,
+   "confidence": 0.92,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 资产负债表(EM) 2026-06-30"
+  },
+  {
+   "key": "inventory",
+   "value": "not_disclosed",
+   "confidence": 0.92,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 资产负债表(EM) 2026-06-30"
+  },
+  {
+   "key": "total_assets",
+   "value": 184999362605.88,
+   "confidence": 0.92,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 资产负债表(EM) 2026-06-30"
+  },
+  {
+   "key": "net_assets_attributable",
+   "value": 118480043070.54,
+   "confidence": 0.92,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 资产负债表(EM) 2026-06-30"
+  },
+  {
+   "key": "interest_bearing_debt",
+   "value": NaN,
+   "confidence": 0.9,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 短借+长借+应付债券+一年内到期"
+  },
+  {
+   "key": "working_capital_delta",
+   "value": -16414527845.470001,
+   "confidence": 0.85,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 两期报告差值(近似)"
+  },
+  {
+   "key": "roe_weighted",
+   "value": 0.07102450222058952,
+   "confidence": 0.82,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 期初期末平均净资产近似(单期净利口径)"
+  },
+  {
+   "key": "gross_margin",
+   "value": 0.8029492044018315,
+   "confidence": 0.9,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 (营收-营业成本)/营收 2026-06-30"
+  },
+  {
+   "key": "ebitda",
+   "value": 11993281908.496996,
+   "confidence": 0.82,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 营业利润+折旧摊销(近似)"
+  },
+  {
+   "key": "interest_expense",
+   "value": -1033876389.49,
+   "confidence": 0.8,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 财务费用口径近似"
+  },
+  {
+   "key": "non_recurring_detail",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 需读年报附注"
+  },
+  {
+   "key": "capex_maintenance",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 维持性capex任何聚合源都不披露"
+  },
+  {
+   "key": "roic",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 需自行计算"
+  },
+  {
+   "key": "customer_concentration_top1",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 需读年报前五大客户"
+  },
+  {
+   "key": "audit_opinion",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 需读年报审计页"
+  },
+  {
+   "key": "litigation_disclosure",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 需读公告/新闻"
+  },
+  {
+   "key": "share_pledge_or_freeze",
+   "value": "not_disclosed",
+   "confidence": 1.0,
+   "source_locator": "akshare/东方财富 datacenter 报告期三表, fetched 2026-10-22 | 需读股权质押公告"
+  }
+ ],
+ "live_fetch": {
+  "tool": "fetch_ashare.py akshare",
+  "symbol": "SZ000858",
+  "fetched_at": "2026-10-22"
+ }
+}
