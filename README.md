@@ -28,7 +28,10 @@
 ## 完整实例报告
 
 一份按 v3 输出标准写成的真实分析（含判决卡、五年趋势表、3×3 估值敏感性矩阵）：
-[samples/600519-moutai-report.md](samples/600519-moutai-report.md) —— 贵州茅台，结论不买（基准内在价值 968 元 vs 现价 1,309 元）。
+- [samples/600519-moutai-report.md](samples/600519-moutai-report.md) —— 贵州茅台：Wide 护城河但现价=基准锚 1.35 倍，结论不买（等 726 元以下）
+- [samples/000858-wuliangye-report.md](samples/000858-wuliangye-report.md) —— 五粮液：2025 净利 -72% + 派息率 223% 超分配，现价=基准锚 1.01 倍零安全边际，结论不买（等的是证据不是低价）
+
+估值情景矩阵均为实测数据 + 明写假设；两份报告展示了同一框架下的两种否决路径：茅台是好公司错价格，五粮液是坏证据低价格幻觉。
 
 装上即用：把本仓库挂到任意支持 [Agent Skills](https://agentskills.io/) 的客户端
 （根目录 `SKILL.md` 已按标准写好）。
